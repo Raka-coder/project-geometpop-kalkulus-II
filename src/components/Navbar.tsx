@@ -55,7 +55,7 @@ const Navbar = () => {
               variant="ghost"
               size="icon"
               onClick={toggleMenu}
-              className="text-custom-gray hover:text-custom-yellow"
+              className="text-dark-blue hover:text-custom-yellow"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </Button>
