@@ -1,4 +1,4 @@
-# Welcome to your Lovable project
+# Selamat Datang di Aplikasi GeometPop
 
 ## Project info
 
