@@ -30,13 +30,13 @@ const Hero = () => {
               dari waktu ke waktu dengan berbagai parameter dan batasan lingkungan.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button asChild className="bg-custom-yellow text-dark-blue hover:bg-custom-yellow/90">
+              <Button asChild className="bg-custom-yellow text-dark-blue hover:bg-custom-yellow/90 text-base">
                 <Link to="/modeling">
                   Mulai Pemodelan
                   <ArrowRight className="ml-2" size={16} />
                 </Link>
               </Button>
-              <Button asChild variant="outline" className="border-custom-gray text-custom-gray hover:bg-dark-blue/50 hover:text-custom-yellow">
+              <Button asChild variant='outline' className="bg-dark-blue text-custom-gray hover:bg-dark-blue/90 text-base">
                 <Link to="/about">
                   Pelajari Deret Geometri
                 </Link>
@@ -47,16 +47,16 @@ const Hero = () => {
           <div className="md:w-1/2 flex justify-center">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 w-full max-w-md card-shadow">
               <div className="text-center p-4">
-                <h3 className="text-white text-xl font-semibold mb-2">Deret Geometri</h3>
+                <h3 className="text-white text-2xl font-semibold mb-2">Deret Geometri</h3>
                 <div className="bg-dark-blue/60 rounded-lg p-4 mb-4">
-                  <p className="text-custom-yellow text-lg mb-2">Rumus Umum:</p>
+                  <p className="text-custom-yellow text-xl mb-2">Rumus Umum:</p>
                   <div className="text-white text-xl mb-2">S<sub>n</sub> = a(1-r<sup>n</sup>)/(1-r)</div>
                   <p className="text-white text-sm">dimana:</p>
                   <p className="text-white text-sm">a = suku pertama</p>
                   <p className="text-white text-sm">r = rasio</p>
                   <p className="text-white text-sm">n = jumlah suku</p>
                 </div>
-                <p className="text-custom-gray text-sm">
+                <p className="text-custom-gray text-base">
                   Eksplorasi aplikasi matematika untuk menganalisis pertumbuhan populasi secara realistis.
                 </p>
               </div>
