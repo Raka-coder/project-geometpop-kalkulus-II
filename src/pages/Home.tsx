@@ -1,5 +1,5 @@
-
 import Hero from '@/components/Hero';
+import { Book } from 'lucide-react';
 
 const Home = () => {
   return (
@@ -15,20 +15,35 @@ const Home = () => {
               dengan rasio tetap. Model pertumbuhan populasi sederhana mengikuti pola deret geometri ini.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-semibold text-dark-blue mb-3">Rasio Pertumbuhan</h3>
+              <div className="bg-white p-6 rounded-lg shadow-lg">
+                <div className="flex items-center mb-3">
+                  <span className="bg-custom-yellow rounded-full p-2">
+                    <Book className="h-5 w-5 text-dark-blue" />
+                  </span>
+                  <h3 className="text-xl font-semibold text-dark-blue">Rasio Pertumbuhan</h3>
+                </div>
                 <p className="text-gray-600">
                   Rasio dari satu periode ke periode berikutnya mencerminkan tingkat pertumbuhan populasi.
                 </p>
               </div>
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-semibold text-dark-blue mb-3">Deret Terbatas</h3>
+              <div className="bg-white p-6 rounded-lg shadow-lg">
+                <div className="flex items-center mb-3">
+                  <span className="bg-custom-yellow  rounded-full p-2">
+                    <Book className="h-5 w-5 text-dark-blue" />
+                  </span>
+                  <h3 className="text-xl font-semibold text-dark-blue mr-8">Deret Terbatas</h3>
+                </div>
                 <p className="text-gray-600">
                   Dalam waktu terbatas, ukuran populasi dapat dimodelkan sebagai jumlah deret geometri terbatas.
                 </p>
               </div>
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-semibold text-dark-blue mb-3">Batas Lingkungan</h3>
+              <div className="bg-white p-6 rounded-lg shadow-lg">
+                <div className="flex items-center mb-3">
+                  <span className="bg-custom-yellow rounded-full p-2">
+                    <Book className="h-5 w-5 text-dark-blue" />
+                  </span>
+                  <h3 className="text-xl font-semibold text-dark-blue">Batas Lingkungan</h3>
+                </div>
                 <p className="text-gray-600">
                   Daya dukung lingkungan memberi batasan alami pada pertumbuhan deret, mengarah ke model logistik.
                 </p>
@@ -42,3 +57,4 @@ const Home = () => {
 };
 
 export default Home;
+
