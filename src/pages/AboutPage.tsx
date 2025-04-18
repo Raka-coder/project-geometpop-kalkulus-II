@@ -1,13 +1,30 @@
 
 import { Card, CardContent } from "@/components/ui/card";
+import DynamicBreadcrumb from "@/components/BreadCrumb";
+import { motion } from "framer-motion";
+import { Home, Info } from "lucide-react";
 
 const AboutPage = () => {
+  const breadcrumbItems = [
+    { name: "Beranda", href: "/", icon: Home},
+    { name: "Tentang Deret", icon: Info },
+  ];
+
   return (
     <div className="min-h-screen py-8 bg-custom-gray/10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
+          <div className="mb-4 cursor-pointer">
+          <DynamicBreadcrumb pages={breadcrumbItems}/>
+          </div>
           <h1 className="text-3xl font-bold text-dark-blue mb-6">Tentang Deret Geometri</h1>
           
+          <motion.div
+          initial={{ opacity: 0, y: 50 }} // Awal: tidak terlihat dan sedikit ke bawah
+          whileInView={{ opacity: 1, y: 0 }} // Ketika masuk viewport: muncul dan naik
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }} // Durasi dan easing
+          viewport={{ once: false }} // Animasi hanya berulang kali
+          >
           <Card className="mb-8">
             <CardContent className="p-6">
               <h2 className="text-2xl font-semibold text-dark-blue mb-4">Konsep Dasar</h2>
@@ -40,6 +57,7 @@ const AboutPage = () => {
               </div>
             </CardContent>
           </Card>
+          </motion.div>
           
           <Card className="mb-8">
             <CardContent className="p-6">
