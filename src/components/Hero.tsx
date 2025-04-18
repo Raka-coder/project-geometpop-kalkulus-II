@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
-    <div className="relative gradient-bg py-16 md:py-24 overflow-hidden">
+    <div className="relative gradient-bg py-16 md:py-24 overflow-hidden font-nunitosans">
       <div className="absolute inset-0 z-0 opacity-20">
         {/* Background pattern */}
         <div className="absolute inset-0" 
