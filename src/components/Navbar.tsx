@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, DnaIcon } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -28,7 +28,7 @@ const Navbar = () => {
             <Link to="/" className="flex items-center">
               <span className="text-custom-yellow font-bold text-2xl">Geomet</span>
               <span className="text-white font-bold text-2xl">Pop</span>
-              <ChevronDown className="text-custom-yellow ml-1" size={16} />
+              <DnaIcon className="text-custom-yellow ml-0" size={22} />
             </Link>
           </div>
           
