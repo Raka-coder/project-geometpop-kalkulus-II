@@ -31,7 +31,7 @@ const PopulationChart = ({ populationData, carryingCapacity }: PopulationChartPr
   };
 
   return (
-    <div className="w-full h-[300px] md:h-[400px]">
+    <div className="w-full h-[300px] md:h-[400px] font-nunitosans">
       <ResponsiveContainer width="100%" height="100%">
         <LineChart
           data={chartData}
@@ -45,8 +45,9 @@ const PopulationChart = ({ populationData, carryingCapacity }: PopulationChartPr
           />
           <YAxis 
             tickFormatter={formatPopulation}
-            label={{ value: 'Ukuran Populasi', angle: -90, position: 'insideLeft' }}
+            label={{ value: 'Ukuran Populasi', angle: -90, position: 'insideLeft'}}
             tick={{ fill: '#333333' }}
+            style={{ fontSize: '12px',  }}
           />
           <Tooltip 
             formatter={(value) => [`${value} individu`, 'Populasi']}

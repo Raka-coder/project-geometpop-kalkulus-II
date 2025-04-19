@@ -107,7 +107,7 @@ const PopulationCalculator = () => {
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full font-nunitosans">
       <Tabs defaultValue="calculator" className="w-full">
         <TabsList className="grid grid-cols-2 mb-4">
           <TabsTrigger value="calculator" className="flex items-center">
