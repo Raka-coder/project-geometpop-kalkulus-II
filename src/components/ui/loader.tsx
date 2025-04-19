@@ -4,15 +4,15 @@ import styled from 'styled-components';
 const Loader = () => {
   return (
     <StyledWrapper>
-      <div className="flex items-center justify-center min-h-[80vh] bg-custom-gray">
-      <div className="spinner">
-        <div />
-        <div />
-        <div />
-        <div />
-        <div />
-        <div />
-      </div>
+      <div className="flex items-center justify-center min-h-[75vh]">
+        <div className="spinner">
+          <div />
+          <div />
+          <div />
+          <div />
+          <div />
+          <div />
+        </div>
       </div>
     </StyledWrapper>
   );
