@@ -1,9 +1,11 @@
 
 import type { Config } from "tailwindcss";
+import tailwindcssAnimate from "tailwindcss-animate";
 
 export default {
 	darkMode: ["class"],
 	content: [
+		"./src/**/*.{js,ts,jsx,tsx}",
 		"./pages/**/*.{ts,tsx}",
 		"./components/**/*.{ts,tsx}",
 		"./app/**/*.{ts,tsx}",
@@ -21,6 +23,7 @@ export default {
 		extend: {
 			fontFamily: {
 				nunitosans: ["Nunito Sans", "sans-serif"],
+				sourcecodepro: ["Source Code Pro", "sans-serif"],				
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -83,5 +86,6 @@ export default {
 			}
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+
+	plugins: [tailwindcssAnimate],
 } satisfies Config;
