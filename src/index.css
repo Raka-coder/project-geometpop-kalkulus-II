@@ -40,6 +40,12 @@
   }
 }
 
+@layer base {
+  mjx-container {
+    @apply font-sourcecodepro text-white;
+  }
+}
+
 .gradient-bg {
   background: linear-gradient(135deg, #14213d 0%, #000000 100%);
 }
