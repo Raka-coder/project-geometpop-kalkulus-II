@@ -1,13 +1,12 @@
-import Hero from '@/components/Hero';
 import { Ratio, Box, Rows2 } from 'lucide-react';
 import { motion } from 'framer-motion';
+import Hero from '@/components/Hero';
 import Footer from '@/components/Footer';
 
 const Home = () => {
   return (
     <div className="min-h-screen font-nunitosans">
       <Hero />
-
       <section className="py-12 bg-custom-gray/20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto">
@@ -17,11 +16,11 @@ const Home = () => {
               dengan rasio tetap. Model pertumbuhan populasi sederhana mengikuti pola deret geometri ini.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {}
+              { }
               <motion.div className="bg-white p-6 rounded-lg shadow-lg"
-                initial={{ opacity: 0, y: 50 }} 
-                whileInView={{ opacity: 1, y: 0 }} 
-                transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }} 
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
                 viewport={{ once: false }} // Animasi hanya berulang kali  
               >
                 <div className="flex items-center mb-3">
@@ -34,12 +33,12 @@ const Home = () => {
                   Rasio dari satu periode ke periode berikutnya mencerminkan tingkat pertumbuhan populasi.
                 </p>
               </motion.div>
-              {}
+              { }
               <motion.div className="bg-white p-6 rounded-lg shadow-lg"
-                initial={{ opacity: 0, y: 50 }} 
-                whileInView={{ opacity: 1, y: 0 }} 
-                transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }} 
-                viewport={{ once: false }} 
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
+                viewport={{ once: false }}
               >
                 <div className="flex items-center mb-3">
                   <span className="bg-custom-yellow  rounded-full p-2">
@@ -51,12 +50,12 @@ const Home = () => {
                   Dalam waktu terbatas, ukuran populasi dapat dimodelkan sebagai jumlah deret geometri terbatas.
                 </p>
               </motion.div>
-              {}
+              { }
               <motion.div className="bg-white p-6 rounded-lg shadow-lg"
-                initial={{ opacity: 0, y: 50 }} 
-                whileInView={{ opacity: 1, y: 0 }} 
-                transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }} 
-                viewport={{ once: false }} 
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
+                viewport={{ once: false }}
               >
                 <div className="flex items-center mb-3">
                   <span className="bg-custom-yellow rounded-full p-2">
@@ -72,7 +71,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-    <Footer/>
+      <Footer />
     </div>
   );
 };
