@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 import { Button } from "./ui/button"
 import { ArrowRight, Github } from "lucide-react"
+import { DnaIcon } from "lucide-react";
 
 function Footer() {
   const footerItems = [
@@ -17,8 +18,10 @@ function Footer() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 gap-3 md:gap-8 py-10 max-sm:max-w-sm max-sm:mx-auto gap-y-8">
           <div className="col-span-full mb-10 lg:col-span-2 lg:mb-0">
-            <Link to="" className="flex justify-start lg:justify-start text-dark-blue font-bold text-4xl">
-              GeometPop
+            <Link to="/" className="flex justify-start lg:justify-start text-dark-blue font-bold text-4xl">
+              <span className="text-custom-yellow font-bold text-4xl">Geomet</span>
+              <span className="text-dark-blue font-bold text-4xl">Pop</span>
+              <DnaIcon className="text-custom-yellow ml-0" size={34} />
             </Link>
             <p className="py-8 text-sm text-gray-500 lg:max-w-xs text-left lg:text-left">
               "GeometPop membantu Anda memahami konsep Geometri dengan cara yang lebih mudah dan interaktif."
