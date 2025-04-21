@@ -42,9 +42,10 @@
 
 @layer base {
   mjx-container {
-    @apply font-sourcecodepro text-white;
+    font-family: 'Source Code Pro', monospace;
   }
 }
+
 
 .gradient-bg {
   background: linear-gradient(135deg, #14213d 0%, #000000 100%);
