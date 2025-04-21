@@ -13,7 +13,7 @@ const NotFound = () => {
   }, [location.pathname]);
 
   return (
-    <div className="min-h-{window.innerHeight} flex items-center justify-center bg-custom-gray/20 font-nunitosans">
+    <div className="min-h-{window.innerHeight} flex items-center justify-center font-nunitosans">
       <div className="text-center pt-12">
         <img src={RobotNotFound} alt="404 Image" className="mx-auto mb-4 w-48 h-48" loading="lazy" />
         <h1 className="text-4xl font-extrabold mb-4 text-dark-blue">Oops!</h1>
