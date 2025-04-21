@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-
 import { Menu, X, DnaIcon } from 'lucide-react';
-import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from 'framer-motion';
+
+import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
