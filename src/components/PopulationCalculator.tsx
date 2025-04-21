@@ -17,6 +17,9 @@ import {
   calculateTimeToReachPopulation
 } from '@/utils/populationCalculations';
 import { useToast } from "@/components/ui/use-toast";
+import MathRenderer from './MathRenderer';
+import MathjaxRenderer from './MathjaxRenderer';
+
 
 const PopulationCalculator = () => {
   const { toast } = useToast();
@@ -329,10 +332,15 @@ const PopulationCalculator = () => {
                     Ini adalah jumlah suku deret geometri.
                   </p>
                   <div className="bg-gray-50 p-4 rounded-md">
-                    <p className="text-xl font-bold text-dark-blue">{formatNumber(totalIndividuals)}</p>
-                    <p className="text-sm text-muted-foreground">
-                      S<sub>n</sub> = a(1-r<sup>n</sup>)/(1-r) untuk {periods + 1} suku
-                    </p>
+                    <p className="text-xl font-bold text-dark-blue mb-2">{formatNumber(totalIndividuals)}</p>
+                    <div className="flex items-center">
+                      <p className="text-sm text-muted-foreground">
+                        <MathRenderer type="inline" formula="S_n = \frac{a(1 - r^n)}{1 - r}" />
+                      </p>
+                      <p className="text-sm text-muted-foreground ml-2">
+                        untuk {periods + 1} suku
+                      </p>
+                    </div>
                   </div>
                   
                   <h3 className="text-lg font-semibold border-l-4 border-custom-yellow pl-3 mt-6">Analisis Jangka Panjang</h3>
@@ -367,13 +375,21 @@ const PopulationCalculator = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm mb-3">
-                    <span className="font-semibold">Model Dasar:</span> Pertumbuhan populasi mengikuti pola deret geometri dengan rumus P(t) = P₀(1+r)ᵗ, 
-                    di mana P₀ adalah populasi awal dan r adalah tingkat pertumbuhan.
+                    <span className="font-semibold">Model Dasar: </span> 
+                    <span className="inline-flex items-center">
+                       Pertumbuhan populasi mengikuti pola deret geometri dengan rumus&nbsp;&nbsp;
+                      <MathjaxRenderer formula="P(t) = P_0 (1 + r)^t" type='inline'/>
+                    </span>
                   </p>
                   {useCarryingCapacity ? (
                     <p className="text-sm mb-3">
-                      <span className="font-semibold">Model dengan Daya Dukung:</span> Ketika daya dukung diterapkan, model menggunakan 
-                      persamaan logistik P(t+1) = P(t) + r×P(t)×(1-P(t)/K) di mana K adalah kapasitas maksimum.
+                      <span className="font-semibold">Model dengan Daya Dukung:</span> 
+                      <span className="inline-flex items-center">
+                        Ketika daya dukung diterapkan, model menggunakan 
+                        persamaan logistik 
+                        <MathRenderer formula="P(t+1) = P(t) + r×P(t)×(1-P(t)/K)" type='inline'/>
+                        di mana K adalah kapasitas maksimum.
+                      </span>
                     </p>
                   ) : (
                     <p className="text-sm mb-3">
