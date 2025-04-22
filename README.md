@@ -4,7 +4,14 @@
 
 **URL**: https://lovable.dev/projects/611dc153-bffc-4263-8f94-b956adfa3969
 
+## Deskripsi
+
+## Preview
+
 ## Fitur Utama:
+
+## Teknologi yang Digunakan
+Project ini dibangun dengan:
 
 ## How can I edit this code?
 
