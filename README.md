@@ -8,10 +8,17 @@
 
 ## Preview
 
-## Fitur Utama:
+## Fitur Utama
 
 ## Teknologi yang Digunakan
 Project ini dibangun dengan:
+
+## Kontributor
+-
+-
+-
+- Raka Restu Saputra
+-
 
 ## How can I edit this code?
 
