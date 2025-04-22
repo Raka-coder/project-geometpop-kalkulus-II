@@ -4,6 +4,8 @@
 
 **URL**: https://lovable.dev/projects/611dc153-bffc-4263-8f94-b956adfa3969
 
+## Fitur Utama:
+
 ## How can I edit this code?
 
 There are several ways of editing your application.
