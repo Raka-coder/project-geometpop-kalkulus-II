@@ -16,7 +16,7 @@ Project ini dibangun dengan:
 ## Kontributor
 -
 -
--
+- Luthfi Apriliansyah
 - Raka Restu Saputra
 -
 
