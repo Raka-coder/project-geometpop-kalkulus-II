@@ -4,6 +4,23 @@
 
 **URL**: https://lovable.dev/projects/611dc153-bffc-4263-8f94-b956adfa3969
 
+## Deskripsi
+
+## Preview
+
+## Fitur Utama
+
+## Teknologi yang Digunakan
+Project ini dibangun dengan:
+
+## Kontributor
+- Tazril Dwi Aprila
+- Ginanjar Abdul Hakim
+- Luthfi Apriliansyah
+- Raka Restu Saputra
+- Rossyada Adly
+
+
 ## How can I edit this code?
 
 There are several ways of editing your application.
