@@ -14,11 +14,11 @@
 Project ini dibangun dengan:
 
 ## Kontributor
--
+- Tazril Dwi Aprila
 - Ginanjar Abdul Hakim
 - Luthfi Apriliansyah
 - Raka Restu Saputra
--
+
 
 ## How can I edit this code?
 
