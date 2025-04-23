@@ -1,6 +1,7 @@
 import { Ratio, Box, Rows2 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Hero from '@/components/Hero';
+import CardTeam from '@/components/CardTeam';
 import Footer from '@/components/Footer';
 
 const Home = () => {
@@ -9,7 +10,7 @@ const Home = () => {
       <Hero />
       <section className="py-12 bg-custom-gray/20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto">
+          <div className="text-center max-w-3xl mx-auto py-6">
             <h2 className="text-2xl md:text-3xl font-bold text-dark-blue mb-6">Deret Geometri dalam Pertumbuhan Populasi</h2>
             <p className="text-lg mb-8 text-gray-700">
               Deret geometri adalah rangkaian bilangan di mana setiap suku berikutnya diperoleh dengan mengalikan suku sebelumnya
@@ -70,6 +71,7 @@ const Home = () => {
             </div>
           </div>
         </div>
+        <CardTeam />
       </section>
       <Footer />
     </div>
