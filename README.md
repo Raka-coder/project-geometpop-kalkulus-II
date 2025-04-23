@@ -18,6 +18,7 @@ Project ini dibangun dengan:
 - Ginanjar Abdul Hakim
 - Luthfi Apriliansyah
 - Raka Restu Saputra
+- Lutphi Hermanto
 
 
 ## How can I edit this code?
