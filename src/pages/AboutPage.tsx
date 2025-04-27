@@ -1,11 +1,9 @@
 import { motion } from "framer-motion";
 import { Home, Info } from "lucide-react";
-
+import { Helmet } from "react-helmet";
 import { Card, CardContent } from "@/components/ui/card";
-
 import DynamicBreadcrumb from "@/components/BreadCrumb";
 import MathRenderer from "@/components/MathRenderer";
-import MathjaxRenderer from "@/components/MathjaxRenderer";
 import Footer from "@/components/Footer";
 
 const AboutPage = () => {
@@ -14,9 +12,19 @@ const AboutPage = () => {
     { name: "Tentang Deret", icon: Info },
   ];
 
+  const title = "Tentang Deret Geometri";
+
   return (
     <>
-      <div className="min-h-screen py-8 bg-custom-gray/10">
+      <Helmet>
+        <title>GeometPop - {title}</title>
+        <meta
+          name="description"
+          content="Aplikasi GeometPop untuk pemodelan pertumbuhan populasi dengan deret geometri."
+        />
+        <link rel="canonical" href="/about" />
+      </Helmet>
+      <div className="min-h-screen py-8 bg-custom-gray/10 font-nunitosans">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="mb-4 cursor-pointer">
@@ -60,7 +68,7 @@ const AboutPage = () => {
                   </ul>
                   <h3 className="text-xl font-semibold text-dark-blue mt-6 mb-3">Jumlah Deret Geometri Terbatas</h3>
                   <p className="text-gray-700 mb-4 flex items-center gap-2">
-                    Rumus untuk menghitung jumlah <MathjaxRenderer type="inline" formula="n" />suku pertama dari deret geometri adalah:
+                    Rumus untuk menghitung jumlah n suku pertama dari deret geometri adalah:
                   </p>
                   <div className="bg-dark-blue/5 p-4 rounded-lg mb-6 flex flex-col items-center justify-center gap-4">
                     <p className="text-sm font-bold text-dark-blue">
