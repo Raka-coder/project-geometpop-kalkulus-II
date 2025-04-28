@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   Breadcrumb,
   BreadcrumbList,
@@ -6,7 +6,7 @@ import {
   BreadcrumbLink,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
+} from '@/components/ui/breadcrumb';
 
 interface DynamicBreadcrumbProps {
   pages: {
@@ -27,15 +27,28 @@ const DynamicBreadcrumb: React.FC<DynamicBreadcrumbProps> = ({ pages }) => {
             {/* Render link atau teks page terakhir */}
             {href ? (
               <BreadcrumbItem>
-                <BreadcrumbLink href={href} className="flex items-center gap-1 text-sm font-medium text-dark-blue/50 hover:text-dark-blue font-nunitosans">
-                  {Icon && <span><Icon /></span>} {/* Render ikon */}
+                <BreadcrumbLink
+                  href={href}
+                  className="flex items-center gap-1 text-sm font-medium text-dark-blue/50 hover:text-dark-blue font-nunitosans"
+                >
+                  {Icon && (
+                    <span>
+                      <Icon />
+                    </span>
+                  )}{' '}
+                  {/* Render ikon */}
                   {name}
                 </BreadcrumbLink>
               </BreadcrumbItem>
             ) : (
               <BreadcrumbItem>
                 <BreadcrumbPage className="flex items-center gap-1 text-sm font-medium text-dark-blue font-nunitosans">
-                  {Icon && <span><Icon /></span>} {/* Render ikon */}
+                  {Icon && (
+                    <span>
+                      <Icon />
+                    </span>
+                  )}{' '}
+                  {/* Render ikon */}
                   {name}
                 </BreadcrumbPage>
               </BreadcrumbItem>

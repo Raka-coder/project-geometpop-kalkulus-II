@@ -1,9 +1,8 @@
-import { ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
-import { Typewriter } from "react-simple-typewriter";
-
-import { Button } from "@/components/ui/button";
-import MathRenderer from "./MathRenderer";
+import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Typewriter } from 'react-simple-typewriter';
+import { Button } from '@/components/ui/button';
+import MathRenderer from './MathRenderer';
 
 const Hero = () => {
   return (
@@ -14,8 +13,8 @@ const Hero = () => {
           className="absolute inset-0"
           style={{
             backgroundImage:
-              "radial-gradient(circle, #fca311 1px, transparent 1px)",
-            backgroundSize: "30px 30px",
+              'radial-gradient(circle, #fca311 1px, transparent 1px)',
+            backgroundSize: '30px 30px',
           }}
         ></div>
       </div>
@@ -27,9 +26,9 @@ const Hero = () => {
               Pemodelan Pertumbuhan Populasi
             </h1>
             <h2 className="text-xl md:text-2xl text-custom-yellow mb-6">
-              dengan{" "}
+              dengan{' '}
               <Typewriter
-                words={["Deret Geometri", "Aplikasi GeometPop!"]}
+                words={['Deret Geometri', 'Aplikasi GeometPop!']}
                 loop={0}
                 cursor
                 cursorStyle="|"
@@ -79,11 +78,14 @@ const Hero = () => {
                   </div>
                   <p className="text-white text-sm">Dimana:</p>
                   <p className="text-white flex items-center justify-center text-sm">
-                    <MathRenderer type="inline" formula="a"/> = suku pertama</p>
+                    <MathRenderer type="inline" formula="a" /> = suku pertama
+                  </p>
                   <p className="text-white flex items-center justify-center text-sm">
-                    <MathRenderer type="inline" formula="r"/> = rasio </p>
+                    <MathRenderer type="inline" formula="r" /> = rasio{' '}
+                  </p>
                   <p className="text-white flex items-center justify-center text-sm">
-                    <MathRenderer type="inline" formula="n"/> = jumlah suku</p>
+                    <MathRenderer type="inline" formula="n" /> = jumlah suku
+                  </p>
                 </div>
                 <p className="text-custom-gray text-base">
                   Eksplorasi aplikasi matematika untuk menganalisis pertumbuhan

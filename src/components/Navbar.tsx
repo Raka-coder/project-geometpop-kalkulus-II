@@ -2,8 +2,7 @@ import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, DnaIcon } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-
-import { Button } from "@/components/ui/button";
+import { Button } from '@/components/ui/button';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +12,7 @@ const Navbar = () => {
     { name: 'Beranda', path: '/' },
     { name: 'Tentang Deret', path: '/about' },
     { name: 'Pemodelan', path: '/modeling' },
-    { name: 'Tim Kami', path: '/team' },
+    { name: 'Bantuan', path: '/help' },
   ];
 
   const toggleMenu = () => {
@@ -26,12 +25,14 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
-              <span className="text-custom-yellow font-bold text-2xl">Geomet</span>
+              <span className="text-custom-yellow font-bold text-2xl">
+                Geomet
+              </span>
               <span className="text-white font-bold text-2xl">Pop</span>
               <DnaIcon className="text-custom-yellow ml-0" size={22} />
             </Link>
           </div>
-          
+
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-4">
@@ -50,7 +51,7 @@ const Navbar = () => {
               ))}
             </div>
           </div>
-          
+
           {/* Mobile menu button */}
           <div className="md:hidden">
             <Button
@@ -64,7 +65,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      
+
       {/* Mobile Navigation */}
       <AnimatePresence>
         {isOpen && (
@@ -72,7 +73,7 @@ const Navbar = () => {
             initial={{ height: 0 }}
             animate={{ height: 'auto' }}
             exit={{ height: 0 }}
-            transition={{ duration: 0.3}}
+            transition={{ duration: 0.3 }}
             className="md:hidden bg-dark-blue overflow-hidden"
           >
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
@@ -99,5 +100,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-

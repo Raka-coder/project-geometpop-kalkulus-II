@@ -1,10 +1,10 @@
 export interface TeamMember {
-  id: string
-  name: string
-  jobTitle: string
-  photoUrl: string
+  id: string;
+  name: string;
+  jobTitle: string;
+  photoUrl: string;
   socialLinks: {
-    github?: string
-    linkedin?: string
-  }
+    github?: string;
+    linkedin?: string;
+  };
 }

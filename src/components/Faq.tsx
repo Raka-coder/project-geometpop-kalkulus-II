@@ -3,55 +3,55 @@ import {
   AccordionItem,
   AccordionTrigger,
   AccordionContent,
-} from "@/components/ui/accordion";
+} from '@/components/ui/accordion';
 
 const FAQ = () => {
   const faqs = [
     // Konsep Dasar
     {
-      question: "Apa itu pemodelan populasi?",
+      question: 'Apa itu pemodelan populasi?',
       answer:
-        "Pemodelan populasi adalah metode matematika untuk memprediksi pertumbuhan atau penurunan jumlah individu dalam suatu populasi berdasarkan parameter tertentu seperti tingkat kelahiran, kematian, atau migrasi.",
+        'Pemodelan populasi adalah metode matematika untuk memprediksi pertumbuhan atau penurunan jumlah individu dalam suatu populasi berdasarkan parameter tertentu seperti tingkat kelahiran, kematian, atau migrasi.',
     },
     {
-      question: "Mengapa deret geometri digunakan dalam pemodelan populasi?",
+      question: 'Mengapa deret geometri digunakan dalam pemodelan populasi?',
       answer:
-        "Deret geometri digunakan karena pola pertumbuhan populasi sering kali mengikuti rasio tetap (misalnya, pertumbuhan eksponensial), yang dapat direpresentasikan dengan rumus P(t) = P₀(1 + r)ᵗ.",
-    },
-
-    {
-      question:
-        "Apa saja contoh aplikasi pemodelan populasi dalam kehidupan sehari-hari?",
-      answer:
-        "Contohnya meliputi memproyeksikan pertumbuhan penduduk suatu negara, memprediksi jumlah hewan liar dalam suatu habitat, atau menentukan kebutuhan sumber daya seperti air, makanan, atau energi berdasarkan proyeksi populasi.",
+        'Deret geometri digunakan karena pola pertumbuhan populasi sering kali mengikuti rasio tetap (misalnya, pertumbuhan eksponensial), yang dapat direpresentasikan dengan rumus P(t) = P₀(1 + r)ᵗ.',
     },
 
     {
       question:
-        "Apakah saya bisa memasukkan nilai negatif untuk tingkat pertumbuhan (r)?",
+        'Apa saja contoh aplikasi pemodelan populasi dalam kehidupan sehari-hari?',
       answer:
-        "Ya, nilai negatif untuk r menunjukkan penurunan populasi (misalnya, jika terjadi penurunan kelahiran atau meningkatnya kematian).",
+        'Contohnya meliputi memproyeksikan pertumbuhan penduduk suatu negara, memprediksi jumlah hewan liar dalam suatu habitat, atau menentukan kebutuhan sumber daya seperti air, makanan, atau energi berdasarkan proyeksi populasi.',
+    },
+
+    {
+      question:
+        'Apakah saya bisa memasukkan nilai negatif untuk tingkat pertumbuhan (r)?',
+      answer:
+        'Ya, nilai negatif untuk r menunjukkan penurunan populasi (misalnya, jika terjadi penurunan kelahiran atau meningkatnya kematian).',
     },
     {
-      question: "Apakah hasil pemodelan selalu akurat?",
+      question: 'Apakah hasil pemodelan selalu akurat?',
       answer:
-        "Tidak, hasil pemodelan hanya berupa estimasi berdasarkan asumsi bahwa tingkat pertumbuhan tetap konstan. Faktor-faktor lain seperti bencana alam, kebijakan baru, atau perubahan lingkungan dapat memengaruhi hasil aktual.",
+        'Tidak, hasil pemodelan hanya berupa estimasi berdasarkan asumsi bahwa tingkat pertumbuhan tetap konstan. Faktor-faktor lain seperti bencana alam, kebijakan baru, atau perubahan lingkungan dapat memengaruhi hasil aktual.',
     },
 
     // Bantuan Tambahan
     {
       question:
-        "Di mana saya bisa mempelajari lebih lanjut tentang deret geometri?",
+        'Di mana saya bisa mempelajari lebih lanjut tentang deret geometri?',
       answer:
-        "Anda dapat mempelajari lebih lanjut tentang deret geometri melalui buku matematika, kursus online, atau artikel ilmiah tentang kalkulus dan matematika diskrit.",
+        'Anda dapat mempelajari lebih lanjut tentang deret geometri melalui buku matematika, kursus online, atau artikel ilmiah tentang kalkulus dan matematika diskrit.',
     },
     {
-      question: "Apakah ada manual book untuk website ini?",
+      question: 'Apakah ada manual book untuk website ini?',
       answer:
         "Ya, Anda dapat mengunduh manual book dengan mengklik tombol 'Unduh Manual Book' di halaman utama.",
     },
     {
-      question: "Bagaimana cara melaporkan bug atau memberikan saran?",
+      question: 'Bagaimana cara melaporkan bug atau memberikan saran?',
       answer:
         "Silakan gunakan form feedback yang tersedia di halaman 'Bantuan'.",
     },

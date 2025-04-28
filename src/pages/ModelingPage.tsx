@@ -30,9 +30,12 @@ const ModelingPage = () => {
             </div>
           </div>
           <div className="text-center mb-8">
-            <h1 className="text-3xl font-bold text-dark-blue">Pemodelan Pertumbuhan Populasi</h1>
+            <h1 className="text-3xl font-bold text-dark-blue">
+              Pemodelan Pertumbuhan Populasi
+            </h1>
             <p className="text-gray-600 mt-2 max-w-2xl mx-auto">
-              Eksplorasi dan analisis pertumbuhan populasi dengan model deret geometri dan faktor lingkungan
+              Eksplorasi dan analisis pertumbuhan populasi dengan model deret
+              geometri dan faktor lingkungan
             </p>
           </div>
           <div className="max-w-5xl mx-auto">

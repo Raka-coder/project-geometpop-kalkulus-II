@@ -1,20 +1,20 @@
-import { useLocation } from "react-router-dom";
-import { useEffect } from "react";
-import { Helmet } from "react-helmet";
-import RobotNotFound from "@/assets/robot.webp";
+import { useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
+import RobotNotFound from '@/assets/robot.webp';
 
 const NotFound = () => {
   const location = useLocation();
 
   useEffect(() => {
     console.error(
-      "404 Error: User attempted to access non-existent route:",
+      '404 Error: User attempted to access non-existent route:',
       location.pathname
     );
   }, [location.pathname]);
 
   useEffect(() => {
-    document.title = "404 Not Found | GeometPop";
+    document.title = '404 Not Found | GeometPop';
   }, []);
 
   return (

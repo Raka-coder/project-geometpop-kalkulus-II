@@ -1,29 +1,29 @@
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import * as z from "zod";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useForm } from 'react-hook-form';
+import * as z from 'zod';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
-import { Card } from "@/components/ui/card";
-import { useState } from "react";
-import { Loader2 } from "lucide-react";
-import axios from "axios";
+} from '@/components/ui/select';
+import { Card } from '@/components/ui/card';
+import { useState } from 'react';
+import { Loader2 } from 'lucide-react';
+import axios from 'axios';
 
 const feedbackFormSchema = z.object({
   name: z.string().optional(),
-  email: z.string().email("Email tidak valid").optional().or(z.literal("")),
-  feedbackType: z.enum(["bug", "suggestion", "feature", "general"], {
-    required_error: "Harap pilih jenis feedback",
+  email: z.string().email('Email tidak valid').optional().or(z.literal('')),
+  feedbackType: z.enum(['bug', 'suggestion', 'feature', 'general'], {
+    required_error: 'Harap pilih jenis feedback',
   }),
   message: z.string().min(10, {
-    message: "Pesan harus minimal 10 karakter",
+    message: 'Pesan harus minimal 10 karakter',
   }),
 });
 
@@ -32,35 +32,35 @@ type FeedbackFormValues = z.infer<typeof feedbackFormSchema>;
 function HelpFeedbackForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
-  const [submitError, setSubmitError] = useState("");
+  const [submitError, setSubmitError] = useState('');
 
   const form = useForm<FeedbackFormValues>({
     resolver: zodResolver(feedbackFormSchema),
     defaultValues: {
-      name: "",
-      email: "",
-      message: "",
+      name: '',
+      email: '',
+      message: '',
     },
   });
 
   async function onSubmit(data: FeedbackFormValues) {
     setIsSubmitting(true);
-    setSubmitError("");
+    setSubmitError('');
 
     try {
       const response = await axios.post(
         import.meta.env.VITE_GETFORM_ENDPOINT,
         {
-          name: data.name || "Anonymous",
-          email: data.email || "No email provided",
+          name: data.name || 'Anonymous',
+          email: data.email || 'No email provided',
           feedback_type: data.feedbackType,
           message: data.message,
           submitted_at: new Date().toISOString(),
         },
         {
           headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
           },
         }
       );
@@ -68,13 +68,13 @@ function HelpFeedbackForm() {
       setSubmitSuccess(true);
       form.reset();
     } catch (error) {
-      console.error("Error submitting feedback:", error);
+      console.error('Error submitting feedback:', error);
       setSubmitError(
-        "Terjadi kesalahan saat mengirim feedback. Silakan coba lagi."
+        'Terjadi kesalahan saat mengirim feedback. Silakan coba lagi.'
       );
 
       if (axios.isAxiosError(error)) {
-        console.error("Axios error details:", {
+        console.error('Axios error details:', {
           status: error.response?.status,
           data: error.response?.data,
           headers: error.response?.headers,
@@ -141,7 +141,7 @@ function HelpFeedbackForm() {
             <Input
               id="name"
               placeholder="Nama Anda"
-              {...form.register("name")}
+              {...form.register('name')}
             />
             {form.formState.errors.name && (
               <p className="text-red-500 text-sm mt-1">
@@ -158,7 +158,7 @@ function HelpFeedbackForm() {
               id="email"
               type="email"
               placeholder="example@gmail.com"
-              {...form.register("email")}
+              {...form.register('email')}
             />
             {form.formState.errors.email && (
               <p className="text-red-500 text-sm mt-1">
@@ -178,11 +178,11 @@ function HelpFeedbackForm() {
           <Select
             onValueChange={(value) =>
               form.setValue(
-                "feedbackType",
-                value as "bug" | "suggestion" | "feature" | "general"
+                'feedbackType',
+                value as 'bug' | 'suggestion' | 'feature' | 'general'
               )
             }
-            defaultValue={form.watch("feedbackType")}
+            defaultValue={form.watch('feedbackType')}
           >
             <SelectTrigger>
               <SelectValue placeholder="Pilih Jenis Feedback" />
@@ -209,7 +209,7 @@ function HelpFeedbackForm() {
             id="message"
             placeholder="Jelaskan feedback Anda secara detail..."
             className="min-h-[150px]"
-            {...form.register("message")}
+            {...form.register('message')}
           />
           {form.formState.errors.message && (
             <p className="text-red-500 text-sm mt-1">
@@ -229,7 +229,7 @@ function HelpFeedbackForm() {
               Mengirim...
             </>
           ) : (
-            "Kirim Feedback"
+            'Kirim Feedback'
           )}
         </Button>
       </form>

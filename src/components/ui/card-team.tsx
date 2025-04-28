@@ -1,43 +1,29 @@
-import { Card, CardContent } from "@/components/ui/card"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Github, Linkedin } from "lucide-react"
-import type { TeamMember } from "@/types/team"
+import { Github, Linkedin } from 'lucide-react';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Card, CardContent } from '@/components/ui/card';
+import type { TeamMember } from '@/types/team';
 
 interface TeamSectionProps {
-  members: TeamMember[]
+  members: TeamMember[];
 }
 
 export default function TeamSection({ members }: TeamSectionProps) {
   return (
-    <section className="container py-12 mx-auto font-nunitosans px-12">
-      <h2 className="mb-8 text-3xl font-bold text-center text-dark-blue">Tim Kami</h2>
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5 xl:grid-cols-5">
+    <section className="container py-16 mx-auto font-nunitosans">
+      <h2 className="mb-8 text-3xl font-bold text-center text-dark-blue">
+        Tim Kami
+      </h2>
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5">
         {members.map((member) => (
           <TeamCard key={member.id} member={member} />
         ))}
       </div>
-
-      {/* Custom layout for xl screens to center the bottom row */}
-      {/* <div className="hidden xl:flex xl:flex-wrap xl:items-center xl:justify-between xl:gap-6">
-        {members.slice(0, 3).map((member) => (
-          <div key={member.id} className="w-[calc(20%-1rem)]">
-            <TeamCard member={member} />
-          </div>
-        ))}
-        <div className="w-full flex justify-center gap-6 mt-6">
-          {members.slice(3, 5).map((member) => (
-            <div key={member.id} className="w-[calc(20%-1rem)]">
-              <TeamCard member={member} />
-            </div>
-          ))}
-        </div>
-      </div> */}
     </section>
-  )
+  );
 }
 
 interface TeamCardProps {
-  member: TeamMember
+  member: TeamMember;
 }
 
 function TeamCard({ member }: TeamCardProps) {
@@ -46,12 +32,20 @@ function TeamCard({ member }: TeamCardProps) {
       <CardContent className="p-0">
         <div className="flex flex-col items-center p-6">
           <Avatar className="w-24 h-24 mb-4 border-2 border-primary">
-            <AvatarImage src={member.photoUrl || "/placeholder.svg"} alt={member.name} title={member.jobTitle} />
+            <AvatarImage
+              src={member.photoUrl || '/placeholder-svgrepo-com.svg'}
+              alt={member.name}
+              title={member.jobTitle}
+            />
             <AvatarFallback>{getInitials(member.name)}</AvatarFallback>
           </Avatar>
-          <h3 className="text-base text-dark-blue font-semibold">{member.name}</h3>
-          <p className="mb-4 text-sm text-muted-foreground">{member.jobTitle}</p>
-          <div className="flex space-x-3">
+          <h3 className="text-base text-dark-blue font-semibold">
+            {member.name}
+          </h3>
+          <p className="mb-4 text-sm text-muted-foreground">
+            {member.jobTitle}
+          </p>
+          <div className="flex space-x-1">
             {member.socialLinks.github && (
               <a
                 href={member.socialLinks.github}
@@ -63,7 +57,7 @@ function TeamCard({ member }: TeamCardProps) {
                 <Github className="w-5 h-5" />
               </a>
             )}
-            
+
             {member.socialLinks.linkedin && (
               <a
                 href={member.socialLinks.linkedin}
@@ -79,16 +73,15 @@ function TeamCard({ member }: TeamCardProps) {
         </div>
       </CardContent>
     </Card>
-  )
+  );
 }
 
 // Helper function to get initials from name
 function getInitials(name: string): string {
   return name
-    .split(" ")
+    .split(' ')
     .map((part) => part[0])
-    .join("")
+    .join('')
     .toUpperCase()
-    .substring(0, 2)
+    .substring(0, 2);
 }
-

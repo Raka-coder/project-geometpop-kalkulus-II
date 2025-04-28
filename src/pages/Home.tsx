@@ -1,14 +1,14 @@
-import { motion } from "framer-motion";
-import { Ratio, Box, Rows2 } from "lucide-react";
-import { Helmet } from "react-helmet";
-import Hero from "@/components/Hero";
-import CardTeam from "@/components/CardTeam";
-import ManualBookViewer from "@/components/ManualBookViewer";
-import FAQ from "@/components/Faq";
-import Footer from "@/components/Footer";
+import { motion } from 'framer-motion';
+import { Ratio, Box, Rows2 } from 'lucide-react';
+import { Helmet } from 'react-helmet';
+import Hero from '@/components/Hero';
+import CardTeam from '@/components/CardTeam';
+import ManualBookViewer from '@/components/ManualBookViewer';
+import FAQ from '@/components/Faq';
+import Footer from '@/components/Footer';
 
 const Home = () => {
-  const title = "Geometri dalam Pertumbuhan Populasi";
+  const title = 'Geometri dalam Pertumbuhan Populasi';
   return (
     <>
       <Helmet>
@@ -39,7 +39,7 @@ const Home = () => {
                   className="bg-white p-6 rounded-lg shadow-lg"
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+                  transition={{ duration: 0.6, ease: 'easeOut', delay: 0.2 }}
                   viewport={{ once: false }} // Animasi hanya berulang kali
                 >
                   <div className="flex items-center mb-3">
@@ -60,7 +60,7 @@ const Home = () => {
                   className="bg-white p-6 rounded-lg shadow-lg"
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
+                  transition={{ duration: 0.6, ease: 'easeOut', delay: 0.3 }}
                   viewport={{ once: false }}
                 >
                   <div className="flex items-center mb-3">
@@ -81,7 +81,7 @@ const Home = () => {
                   className="bg-white p-6 rounded-lg shadow-lg"
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
+                  transition={{ duration: 0.6, ease: 'easeOut', delay: 0.4 }}
                   viewport={{ once: false }}
                 >
                   <div className="flex items-center mb-3">

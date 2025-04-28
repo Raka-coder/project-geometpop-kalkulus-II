@@ -1,32 +1,32 @@
 // Importing libraries
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Suspense, lazy } from "react";
-import { Helmet } from "react-helmet";
-import { MathJaxContext } from "better-react-mathjax";
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Suspense, lazy } from 'react';
+import { Helmet } from 'react-helmet';
+import { MathJaxContext } from 'better-react-mathjax';
 // importing ui
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
+import { Toaster } from '@/components/ui/toaster';
+import { Toaster as Sonner } from '@/components/ui/sonner';
+import { TooltipProvider } from '@/components/ui/tooltip';
 
 // Importing components
-import Navbar from "@/components/Navbar";
-import Loader from "./components/ui/loader";
+import Navbar from '@/components/Navbar';
+import Loader from './components/ui/loader';
 
 // Importing pages
-const Home = lazy(() => import("@/pages/Home"));
-const ModelingPage = lazy(() => import("@/pages/ModelingPage"));
-const AboutPage = lazy(() => import("@/pages/AboutPage"));
-const HelpPage = lazy(() => import("@/pages/HelpPage"));
-const NotFound = lazy(() => import("@/pages/NotFound"));
+const Home = lazy(() => import('@/pages/Home'));
+const ModelingPage = lazy(() => import('@/pages/ModelingPage'));
+const AboutPage = lazy(() => import('@/pages/AboutPage'));
+const HelpPage = lazy(() => import('@/pages/HelpPage'));
+const NotFound = lazy(() => import('@/pages/NotFound'));
 
 const queryClient = new QueryClient();
 
 const config = {
-  loader: { load: ["input/tex", "output/chtml"] },
+  loader: { load: ['input/tex', 'output/chtml'] },
   tex: {
-    inlineMath: [["\\(", "\\)"]],
-    displayMath: [["\\[", "\\]"]],
+    inlineMath: [['\\(', '\\)']],
+    displayMath: [['\\[', '\\]']],
   },
 };
 

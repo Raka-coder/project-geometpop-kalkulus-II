@@ -1,15 +1,15 @@
-import { Home, Info } from "lucide-react"
-import { Helmet } from "react-helmet";
-import DynamicBreadcrumb from "@/components/BreadCrumb"
-import HelpFeedbackForm from "@/components/HelpForm";
-import Footer from "@/components/Footer";
+import { Home, Info } from 'lucide-react';
+import { Helmet } from 'react-helmet';
+import DynamicBreadcrumb from '@/components/BreadCrumb';
+import HelpFeedbackForm from '@/components/HelpForm';
+import Footer from '@/components/Footer';
 
 function HelpPage() {
   const breadcrumbItems = [
-    { name: "Beranda", href: "/", icon: Home },
-    { name: "Bantuan", icon: Info },
+    { name: 'Beranda', href: '/', icon: Home },
+    { name: 'Bantuan', icon: Info },
   ];
-  const title = "Bantuan dan Umpan Balik";
+  const title = 'Bantuan dan Umpan Balik';
   return (
     <>
       <Helmet>
@@ -33,7 +33,7 @@ function HelpPage() {
       </div>
       <Footer />
     </>
-  )
+  );
 }
 
-export default HelpPage
+export default HelpPage;

@@ -5,7 +5,10 @@ interface MathjaxRendererProps {
   type?: 'inline' | 'block'; // Jenis rendering: inline atau block
 }
 
-const MathjaxRenderer: React.FC<MathjaxRendererProps> = ({ formula, type = 'block' }) => {
+const MathjaxRenderer: React.FC<MathjaxRendererProps> = ({
+  formula,
+  type = 'block',
+}) => {
   const mathRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {

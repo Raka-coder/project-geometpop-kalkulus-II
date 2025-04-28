@@ -1,7 +1,7 @@
-import { useState } from "react";
-import { motion } from "framer-motion";
-import { X, BookOpen, Download } from "lucide-react";
-import { Button } from "./ui/button";
+import { useState } from 'react';
+import { motion } from 'framer-motion';
+import { X, BookOpen, Download } from 'lucide-react';
+import { Button } from './ui/button';
 
 const ManualBookViewer = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -11,7 +11,7 @@ const ManualBookViewer = () => {
 
   const handleDownload = () => {
     // Mengarahkan pengguna ke file manual book untuk diunduh
-    window.open("/manual-book.pdf", "_blank");
+    window.open('/manual-book.pdf', '_blank');
   };
 
   return (
