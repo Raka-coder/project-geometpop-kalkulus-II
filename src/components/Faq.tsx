@@ -40,12 +40,6 @@ const FAQ = () => {
 
     // Bantuan Tambahan
     {
-      question:
-        'Di mana saya bisa mempelajari lebih lanjut tentang deret geometri?',
-      answer:
-        'Anda dapat mempelajari lebih lanjut tentang deret geometri melalui buku matematika, kursus online, atau artikel ilmiah tentang kalkulus dan matematika diskrit.',
-    },
-    {
       question: 'Apakah ada manual book untuk website ini?',
       answer:
         "Ya, Anda dapat mengunduh manual book dengan mengklik tombol 'Unduh Manual Book' di halaman utama.",
