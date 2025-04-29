@@ -1,15 +1,5 @@
 # Selamat Datang di Aplikasi GeometPop
 
-## Daftar Isi
-
-- [Project info](#project-info)
-- [Deskripsi](#deskripsi)
-- [Preview](#preview)
-- [Fitur Utama](#fitur-utama)
-- [Teknologi yang Digunakan](#teknologi-yang-digunakan)
-- [Library yang Digunakan](#library-yang-digunakan)
-- [Kontributor](#kontributor)
-
 ## Project Info
 
 **URL**: https://lovable.dev/projects/611dc153-bffc-4263-8f94-b956adfa3969
