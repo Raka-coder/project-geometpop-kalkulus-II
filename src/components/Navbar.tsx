@@ -58,9 +58,26 @@ const Navbar = () => {
               variant="ghost"
               size="icon"
               onClick={toggleMenu}
-              className="text-custom-yellow"
+              className="text-dark-blue"
             >
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
+              {isOpen ? (
+                <motion.div
+                  initial={{ rotate: 0 }}
+                  animate={{ rotate: 90 }}
+                  exit={{ rotate: 0 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <X size={24} />
+                </motion.div>
+              ) : (
+                <motion.div
+                  initial={{ rotate: 0 }}
+                  animate={{ rotate: 0 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <Menu size={24} />
+                </motion.div>
+              )}
             </Button>
           </div>
         </div>
