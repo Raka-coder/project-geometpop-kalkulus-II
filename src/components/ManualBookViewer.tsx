@@ -15,11 +15,10 @@ const ManualBookViewer = () => {
   };
 
   return (
-    <div>
+    <>
       {/* Tombol Lihat Manual Book */}
       <Button
         onClick={openModal}
-        variant="outline"
         className="bg-custom-yellow text-dark-blue hover:bg-custom-yellow/90 text-base"
       >
         Lihat Manual Book <BookOpen size={16} />
@@ -68,7 +67,7 @@ const ManualBookViewer = () => {
           </motion.div>
         </div>
       )}
-    </div>
+    </>
   );
 };
 
