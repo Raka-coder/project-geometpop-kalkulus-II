@@ -101,18 +101,27 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <section className="py-12 bg-custom-gray/80">
+        <CardTeam />
+        <section className="py-12">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-4xl mx-auto py-6">
+        <FAQ />
+              
+            </div>
+          </div>
+        </section>
+        <section className="py-16 bg-dark-blue">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto py-6">
-              <h2 className="text-2xl md:text-3xl font-bold text-dark-blue mb-6">
-                Aplikasi GeometPop!
+              <h2 className="text-2xl md:text-3xl font-bold text-custom-yellow mb-6">
+                E-book / Panduan
               </h2>
-              <p className="text-lg mb-8 text-gray-700">
+              <p className="text-lg mb-8 text-custom-gray/100">
                 Manual Book ini memberikan panduan lengkap tentang cara
                 menggunakan aplikasi GeometPop untuk pemodelan pertumbuhan
                 populasi dengan deret geometri.
               </p>
-              <p className="text-lg mb-8 text-gray-700">
+              <p className="text-lg mb-8 text-custom-gray/100">
                 Silakan lihat dan unduh manual book di bawah ini untuk informasi
                 lebih lanjut.
               </p>
@@ -120,8 +129,6 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <FAQ />
-        <CardTeam />
         <Footer />
       </div>
     </>
