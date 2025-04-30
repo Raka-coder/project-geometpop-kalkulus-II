@@ -73,7 +73,7 @@ export default function CardTeam() {
   ];
 
   return (
-    <main className="min-h-screen py-6 bg-custom-gray/10">
+    <main className="py-12 bg-custom-gray/10">
       <TeamSection members={teamMembers} />
     </main>
   );
