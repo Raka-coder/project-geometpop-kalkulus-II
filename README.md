@@ -1,5 +1,14 @@
 # Selamat Datang di Aplikasi GeometPop
 
+<div align="center">
+<img src="https://github.com/Raka-coder/project-geometpop-kalkulus-II/blob/c0c8a1cb7d689211977590bc8b0178e02fdd5189/src/assets/logo/GeometPop_nonbg.png" width="30%" />
+  <h3>Pemodelan Populasi dengan Deret Geometri</h3>
+  <a href="https://example.com/documentation">
+    Lihat Panduan »
+  </a>
+</div>
+
+
 ## Project Info
 
 **URL**: https://lovable.dev/projects/611dc153-bffc-4263-8f94-b956adfa3969
@@ -8,9 +17,6 @@
 
 ## Preview
 
-<div align="center">
-<img src="https://github.com/Raka-coder/project-geometpop-kalkulus-II/blob/c0c8a1cb7d689211977590bc8b0178e02fdd5189/src/assets/logo/GeometPop_nonbg.png" width="100%" />
-</div>
 
 ## Fitur Utama
 
