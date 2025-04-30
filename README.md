@@ -29,6 +29,35 @@ Selain teknologi di atas, project ini juga menggunakan beberapa library tambahan
 - ![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
 - ![Zod](https://img.shields.io/badge/zod-%233068b7.svg?style=for-the-badge&logo=zod&logoColor=white)
 
+## Cara Penggunaan
+### Prasyarat
+Untuk menggunakan aplikasi ini, Anda perlu memiliki beberapa alat/tools berikut:
+```
+- Node.js   => v20.0.0 atau versi terbaru
+- NPM       => v10.0.0 atau versi terbaru
+- Git       => v2.48.0 atau versi terbaru
+```
+
+### Instalasi
+Sebelum menggunakan aplikasi ini, Anda perlu melakukan clone terlebih dahulu repository ini:
+```
+git clone https://github.com/lovable-dev/geo-pop-dynamics.git
+```
+Masuk ke direktori:
+```
+cd geo-pop-dynamics
+```
+Sebelum menjalankan aplikasi ini, Anda perlu menginstal dependensi dengan perintah berikut:
+```
+npm install
+```
+
+### Menjalankan Aplikasi
+Untuk menjalankan aplikasi ini, Anda perlu menjalankan perintah berikut:
+```
+npm run dev
+```
+
 ## Kontributor
 Berikut ini adalah daftar kontributor yang telah berkontribusi pada project ini:
 
@@ -37,3 +66,18 @@ Berikut ini adalah daftar kontributor yang telah berkontribusi pada project ini:
 - Raka Restu Saputra
 - Rossyada Adly
 - Tazril Dwi Aprila
+
+## Sumber Daya
+Project ini menggunakan beberapa sumber daya tambahan dari teknologi berikut:
+
+- [Vite](https://vitejs.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [React](https://react.dev/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [Radix UI](https://www.radix-ui.com/)
+- [Axios](https://axios-http.netlify.app/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [React Hook Form](https://react-hook-form.com/)
+- [React Router](https://reactrouter.com/)
+- [Styled Components](https://styled-components.com/)
+- [Zod](https://zod.dev/)
