@@ -80,14 +80,11 @@ Berikut ini adalah daftar kontributor yang telah berkontribusi pada project ini:
 ## Sumber Daya
 Project ini menggunakan beberapa sumber daya tambahan dari teknologi berikut:
 
-- [Vite](https://vitejs.dev/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [React](https://react.dev/)
-- [TailwindCSS](https://tailwindcss.com/)
-- [Radix UI](https://www.radix-ui.com/)
-- [Axios](https://axios-http.netlify.app/)
-- [Framer Motion](https://www.framer.com/motion/)
-- [React Hook Form](https://react-hook-form.com/)
-- [React Router](https://reactrouter.com/)
-- [Styled Components](https://styled-components.com/)
-- [Zod](https://zod.dev/)
+- [Google Fonts](https://fonts.google.com/)
+- [Lucide](https://lucide.dev/)
+- [Mathjax](https://www.mathjax.org/)
+- [UiVerse](https://uiverse.io/)
+- [React bits](https://www.reactbits.dev/)
+- [Recharts](https://recharts.org/en-US)
+- [v0dev](https://v0.dev/)
+
