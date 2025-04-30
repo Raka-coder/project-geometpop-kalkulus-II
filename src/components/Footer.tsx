@@ -73,7 +73,7 @@ function Footer() {
           </div>
         </div>
 
-        <div className="py-7 border-t border-gray-200 items-center">
+        <div className="py-6 border-t border-gray-200 items-center">
           <div className="flex items-center justify-center">
             <span className="text-sm text-gray-500 ">
               <Link to="/" target="_blank" rel="noopener noreferrer">
