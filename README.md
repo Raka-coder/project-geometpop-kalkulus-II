@@ -12,7 +12,7 @@
 
 ## Project Info
 
-**URL**: https://lovable.dev/projects/611dc153-bffc-4263-8f94-b956adfa3969
+**URL**: https://geometpop.pages.dev/
 
 ## Deskripsi
 
@@ -52,15 +52,19 @@ Untuk menggunakan aplikasi ini, Anda perlu memiliki beberapa alat/tools berikut:
 ### Instalasi
 Sebelum menggunakan aplikasi ini, Anda perlu melakukan clone terlebih dahulu repository ini:
 ```
-git clone https://github.com/lovable-dev/geo-pop-dynamics.git
+git clone https://github.com/Raka-coder/project-geometpop-kalkulus-II.git
 ```
 Masuk ke direktori:
 ```
-cd geo-pop-dynamics
+cd project-geometpop-kalkulus-II
 ```
 Sebelum menjalankan aplikasi ini, Anda perlu menginstal dependensi dengan perintah berikut:
 ```
 npm install
+```
+or
+```
+npm install --legacy-peer-deps
 ```
 
 ### Menjalankan Aplikasi
