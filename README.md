@@ -1,5 +1,6 @@
 # Selamat Datang di Aplikasi GeometPop
 
+<br>
 <div align="center">
 <img src="https://github.com/Raka-coder/project-geometpop-kalkulus-II/blob/c0c8a1cb7d689211977590bc8b0178e02fdd5189/src/assets/logo/GeometPop_nonbg.png" width="30%" />
   <h3>Pemodelan Populasi dengan Deret Geometri</h3>
