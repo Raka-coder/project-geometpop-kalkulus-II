@@ -6,9 +6,9 @@
   "files": ["README.md"],
   "imageSize": 100,
   "commit": true,
-  "commitConvention": "none",
+  "commitConvention": "eslint",
   "contributors": [],
   "contributorsPerLine": 7,
-  "linkToUsage": false
+  "linkToUsage": true
 }
 
