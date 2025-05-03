@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { Ratio, Box, Rows2 } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 import Hero from '@/components/Hero';
+// import ThreeDMarqueeDemo from '@/components/Marquee';
 import CardTeam from '@/components/CardTeam';
 import ManualBookViewer from '@/components/ManualBookViewer';
 import FAQ from '@/components/Faq';
@@ -34,7 +35,7 @@ const Home = () => {
                 deret geometri ini.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {}
+                { }
                 <motion.div
                   className="bg-white p-6 rounded-lg shadow-lg"
                   initial={{ opacity: 0, y: 50 }}
@@ -55,7 +56,7 @@ const Home = () => {
                     tingkat pertumbuhan populasi.
                   </p>
                 </motion.div>
-                {}
+                { }
                 <motion.div
                   className="bg-white p-6 rounded-lg shadow-lg"
                   initial={{ opacity: 0, y: 50 }}
@@ -76,7 +77,7 @@ const Home = () => {
                     sebagai jumlah deret geometri terbatas.
                   </p>
                 </motion.div>
-                {}
+                { }
                 <motion.div
                   className="bg-white p-6 rounded-lg shadow-lg"
                   initial={{ opacity: 0, y: 50 }}
@@ -101,15 +102,14 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <CardTeam />
-        <section className="py-12">
+        <section className="py-12 bg-custom-gray/20">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto py-6">
-        <FAQ />
-              
+
             </div>
           </div>
         </section>
+        <CardTeam />
         <section className="py-16 bg-dark-blue">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto py-6">
@@ -126,6 +126,13 @@ const Home = () => {
                 lebih lanjut.
               </p>
               <ManualBookViewer />
+            </div>
+          </div>
+        </section>
+        <section className="py-12 bg-custom-gray/20">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-4xl mx-auto py-6">
+              <FAQ />
             </div>
           </div>
         </section>
