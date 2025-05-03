@@ -77,13 +77,26 @@ npm run dev
 ```
 
 ## Kontributor
-Berikut ini adalah daftar kontributor yang telah berkontribusi pada project ini:
+Berikut ini adalah daftar kontributor yang telah berkontribusi pada project ini ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
 - Ginanjar Abdul Hakim
 - Luthfi Apriliansyah
 - Raka Restu Saputra
 - Rossyada Adly
 - Tazril Dwi Aprila
+
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/Raka-coder"><img src="https://avatars.githubusercontent.com/u/183841707?v=4" width="100px;" alt=""/><br /><sub><b>Raka Restu Saputra</b></sub></a><br /><a href="https://github.com/Raka-coder/project-geometpop-kalkulus-II/commits/main/?author=Raka-coder
+    " title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/username2"><img src="https://avatars.githubusercontent.com/u/7654321?v=4" width="100px;" alt=""/><br /><sub><b>Username2</b></sub></a><br /><a href="https://github.com/username/repo/commits?author=username2" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/username2"><img src="https://avatars.githubusercontent.com/u/7654321?v=4" width="100px;" alt=""/><br /><sub><b>Username2</b></sub></a><br /><a href="https://github.com/username/repo/commits?author=username2" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/username2"><img src="https://avatars.githubusercontent.com/u/7654321?v=4" width="100px;" alt=""/><br /><sub><b>Username2</b></sub></a><br /><a href="https://github.com/username/repo/commits?author=username2" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/username2"><img src="https://avatars.githubusercontent.com/u/7654321?v=4" width="100px;" alt=""/><br /><sub><b>Username2</b></sub></a><br /><a href="https://github.com/username/repo/commits?author=username2" title="Documentation">📖</a></td>
+  </tr>
+</table>
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
 
 ## Sumber Daya
 Project ini menggunakan beberapa sumber daya tambahan dari teknologi berikut:
@@ -96,16 +109,3 @@ Project ini menggunakan beberapa sumber daya tambahan dari teknologi berikut:
 - [Recharts](https://recharts.org/en-US)
 - [v0dev](https://v0.dev/)
 
-
-## Contributors ✨
-
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
