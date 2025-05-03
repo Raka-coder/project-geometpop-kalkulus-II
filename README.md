@@ -39,7 +39,7 @@ Project ini dibangun dengan teknologi berikut: <br>
 Selain teknologi di atas, project ini juga menggunakan beberapa library tambahan: <br>
 - ![Axios](https://img.shields.io/badge/axios-%230A58C1.svg?style=for-the-badge&logo=axios&logoColor=white) 
 - ![Framer Motion](https://img.shields.io/badge/Framer-black?style=for-the-badge&logo=framer&logoColor=white)
-- ![React Hook Form](https://img.shields.io/badge/React%20Hook%20Form-%8526E4.svg?style=for-the-badge&logo=reacthookform&logoColor=white)
+- ![React Hook Form](https://img.shields.io/badge/React%20Hook%20Form-%238526E4.svg?style=for-the-badge&logo=reacthookform&logoColor=white)
 - ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
 - ![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
 - ![Zod](https://img.shields.io/badge/zod-%233068b7.svg?style=for-the-badge&logo=zod&logoColor=white)
@@ -78,13 +78,15 @@ npm run dev
 ```
 
 ## Kontributor
-Berikut ini adalah daftar kontributor yang telah berkontribusi pada project ini ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+Berikut ini adalah daftar kontributor yang telah berkontribusi pada project ini:
 
 - Ginanjar Abdul Hakim
 - Luthfi Apriliansyah
 - Raka Restu Saputra
 - Rossyada Adly
 - Tazril Dwi Aprila
+
+([emoji key](https://allcontributors.org/docs/en/emoji-key))
 
 <table>
   <tr>
@@ -105,8 +107,8 @@ Project ini menggunakan beberapa sumber daya tambahan dari teknologi berikut:
 - [Google Fonts](https://fonts.google.com/)
 - [Lucide](https://lucide.dev/)
 - [Mathjax](https://www.mathjax.org/)
-- [UiVerse](https://uiverse.io/)
-- [React bits](https://www.reactbits.dev/)
+- [Uiverse](https://uiverse.io/)
+- [Reactbits](https://www.reactbits.dev/)
 - [Recharts](https://recharts.org/en-US)
-- [v0dev](https://v0.dev/)
+- [v0.dev](https://v0.dev/)
 
