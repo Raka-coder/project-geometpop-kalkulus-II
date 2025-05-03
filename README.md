@@ -1,7 +1,7 @@
 # Selamat Datang di Aplikasi GeometPop
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors)
-![Contributors](https://img.shields.io/badge/contributors-green.svg?style=flat-square&logo=github&logoColor=white&link=https://github/contributors/Raka-coder/project-geometpop-kalkulus-II)
+![Contributors](https://img.shields.io/github/contributors/Raka-coder/project-geometpop-kalkulus-II?style=flat-square&color=green&logo=github)
 
 <br>
 <div align="center">
