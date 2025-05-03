@@ -1,6 +1,6 @@
 # Selamat Datang di Aplikasi GeometPop
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <br>
@@ -88,10 +88,10 @@ Berikut ini adalah daftar kontributor yang telah berkontribusi pada project ini 
 <table>
   <tr>
     <td align="center"><a href="https://github.com/Raka-coder"><img src="https://avatars.githubusercontent.com/u/183841707?v=4" width="100px;" alt=""/><br /><sub><b>Raka Restu Saputra</b></sub></a><br /><a href="https://github.com/Raka-coder/project-geometpop-kalkulus-II/commits/main/?author=Raka-coder
-    " title="Code">💻</a></td>
+    " title="Code">💻🤔</a></td>
+    <td align="center"><a href="https://github.com/username2"><img src="https://avatars.githubusercontent.com/u/7654321?v=4" width="100px;" alt=""/><br /><sub><b>Username2</b></sub></a><br /><a href="https://github.com/username/repo/commits?author=username2" title="Documentation">🎨</a></td>
     <td align="center"><a href="https://github.com/username2"><img src="https://avatars.githubusercontent.com/u/7654321?v=4" width="100px;" alt=""/><br /><sub><b>Username2</b></sub></a><br /><a href="https://github.com/username/repo/commits?author=username2" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://github.com/username2"><img src="https://avatars.githubusercontent.com/u/7654321?v=4" width="100px;" alt=""/><br /><sub><b>Username2</b></sub></a><br /><a href="https://github.com/username/repo/commits?author=username2" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://github.com/username2"><img src="https://avatars.githubusercontent.com/u/7654321?v=4" width="100px;" alt=""/><br /><sub><b>Username2</b></sub></a><br /><a href="https://github.com/username/repo/commits?author=username2" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/username2"><img src="https://avatars.githubusercontent.com/u/7654321?v=4" width="100px;" alt=""/><br /><sub><b>Username2</b></sub></a><br /><a href="https://github.com/username/repo/commits?author=username2" title="Documentation">👀🤔</a></td>
     <td align="center"><a href="https://github.com/username2"><img src="https://avatars.githubusercontent.com/u/7654321?v=4" width="100px;" alt=""/><br /><sub><b>Username2</b></sub></a><br /><a href="https://github.com/username/repo/commits?author=username2" title="Documentation">📖</a></td>
   </tr>
 </table>
