@@ -23,7 +23,6 @@ import {
 } from '@/utils/populationCalculations';
 import { useToast } from '@/components/ui/use-toast';
 import MathRenderer from './MathRenderer';
-import MathjaxRenderer from './MathjaxRenderer';
 
 const PopulationCalculator = () => {
   const { toast } = useToast();
@@ -459,7 +458,7 @@ const PopulationCalculator = () => {
                     <span className="inline-flex items-center">
                       Pertumbuhan populasi mengikuti pola deret geometri dengan
                       rumus&nbsp;&nbsp;
-                      <MathjaxRenderer
+                      <MathRenderer
                         formula="P(t) = P_0 (1 + r)^t"
                         type="inline"
                       />
