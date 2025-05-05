@@ -110,7 +110,7 @@ const Home = () => {
           </div>
         </section>
         <CardTeam />
-        <section className="py-16 bg-dark-blue">
+        <section className="py-20 bg-dark-blue">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto py-6">
               <h2 className="text-2xl md:text-3xl font-bold text-custom-yellow mb-6">
