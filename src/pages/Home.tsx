@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { Ratio, Box, Rows2 } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 import Hero from '@/components/Hero';
-import { WebsiteShowcase } from '@/components/ImageShowCase';
+import WebsiteShowcase  from '@/components/ImageShowCase';
 import CardTeam from '@/components/CardTeam';
 import ManualBookViewer from '@/components/ManualBookViewer';
 import FAQ from '@/components/Faq';
