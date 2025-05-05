@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import { Home, Info } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 import { Card, CardContent } from '@/components/ui/card';
@@ -34,69 +33,62 @@ const AboutPage = () => {
               Tentang Deret Geometri
             </h1>
 
-            <motion.div
-              initial={{ opacity: 0, y: 50 }} // Awal: tidak terlihat dan sedikit ke bawah
-              whileInView={{ opacity: 1, y: 0 }} // Ketika masuk viewport: muncul dan naik
-              transition={{ duration: 0.6, ease: 'easeOut', delay: 0.1 }} // Durasi dan easing
-              viewport={{ once: false }} // Animasi hanya berulang kali
-            >
-              <Card className="mb-8">
-                <CardContent className="p-6">
-                  <h2 className="text-2xl font-semibold text-dark-blue mb-4">
-                    Konsep Dasar
-                  </h2>
-                  <p className="text-gray-700 mb-4">
-                    Deret geometri adalah penjumlahan dari rangkaian bilangan di
-                    mana rasio antara suku yang berurutan adalah konstan. Bentuk
-                    umum dari deret geometri adalah:
-                  </p>
+            <Card className="mb-8">
+              <CardContent className="p-6">
+                <h2 className="text-2xl font-semibold text-dark-blue mb-4">
+                  Konsep Dasar
+                </h2>
+                <p className="text-gray-700 mb-4">
+                  Deret geometri adalah penjumlahan dari rangkaian bilangan di
+                  mana rasio antara suku yang berurutan adalah konstan. Bentuk
+                  umum dari deret geometri adalah:
+                </p>
 
-                  <div className="bg-dark-blue/5 p-4 rounded-lg mb-6 text-center">
-                    <p className="text-sm font-bold text-dark-blue">
-                      <MathRenderer
-                        type="block"
-                        formula="a + ar + ar^2 + ar^3 + \dots + ar^{(n-1)}"
-                      />
-                    </p>
-                  </div>
-
-                  <p className="text-gray-700 mb-4">Di mana:</p>
-                  <ul className="list-disc pl-6 mb-4 space-y-2 text-gray-700">
-                    <li className="flex items-center gap-2">
-                      <MathRenderer type="inline" formula="a" />= suku pertama
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <MathRenderer type="inline" formula="r" />= rasio umum
-                      (common ratio)
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <MathRenderer type="inline" formula="n" />= jumlah suku
-                    </li>
-                  </ul>
-                  <h3 className="text-xl font-semibold text-dark-blue mt-6 mb-3">
-                    Jumlah Deret Geometri Terbatas
-                  </h3>
-                  <p className="text-gray-700 mb-4 flex items-center gap-2">
-                    Rumus untuk menghitung jumlah n suku pertama dari deret
-                    geometri adalah:
+                <div className="bg-dark-blue/5 p-4 rounded-lg mb-6 text-center">
+                  <p className="text-sm font-bold text-dark-blue">
+                    <MathRenderer
+                      type="block"
+                      formula="a + ar + ar^2 + ar^3 + \dots + ar^{(n-1)}"
+                    />
                   </p>
-                  <div className="bg-dark-blue/5 p-4 rounded-lg mb-6 flex flex-col items-center justify-center gap-4">
-                    <p className="text-sm font-bold text-dark-blue">
-                      <MathRenderer
-                        type="inline"
-                        formula="S_n = \frac{a(1 - r^n)}{1 - r}, \text{ untuk } r \neq 1"
-                      />
-                    </p>
-                    <p className="text-sm font-bold text-dark-blue">
-                      <MathRenderer
-                        type="inline"
-                        formula="S_n = na, \text{ untuk } r = 1"
-                      />
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
+                </div>
+
+                <p className="text-gray-700 mb-4">Di mana:</p>
+                <ul className="list-disc pl-6 mb-4 space-y-2 text-gray-700">
+                  <li className="flex items-center gap-2">
+                    <MathRenderer type="inline" formula="a" />= suku pertama
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <MathRenderer type="inline" formula="r" />= rasio umum
+                    (common ratio)
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <MathRenderer type="inline" formula="n" />= jumlah suku
+                  </li>
+                </ul>
+                <h3 className="text-xl font-semibold text-dark-blue mt-6 mb-3">
+                  Jumlah Deret Geometri Terbatas
+                </h3>
+                <p className="text-gray-700 mb-4 flex items-center gap-2">
+                  Rumus untuk menghitung jumlah n suku pertama dari deret
+                  geometri adalah:
+                </p>
+                <div className="bg-dark-blue/5 p-4 rounded-lg mb-6 flex flex-col items-center justify-center gap-4">
+                  <p className="text-sm font-bold text-dark-blue">
+                    <MathRenderer
+                      type="inline"
+                      formula="S_n = \frac{a(1 - r^n)}{1 - r}, \text{ untuk } r \neq 1"
+                    />
+                  </p>
+                  <p className="text-sm font-bold text-dark-blue">
+                    <MathRenderer
+                      type="inline"
+                      formula="S_n = na, \text{ untuk } r = 1"
+                    />
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
 
             <Card className="mb-8">
               <CardContent className="p-6">
