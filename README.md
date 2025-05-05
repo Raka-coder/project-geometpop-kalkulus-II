@@ -6,7 +6,7 @@
 
 <br>
 <div align="center">
-<img src="https://github.com/Raka-coder/project-geometpop-kalkulus-II/blob/c0c8a1cb7d689211977590bc8b0178e02fdd5189/src/assets/logo/GeometPop_nonbg.png" width="30%" />
+<img src="https://github.com/Raka-coder/project-geometpop-kalkulus-II/blob/main/src/assets/logo/GeometPop_nonbg.png" width="30%" />
   <h3>Pemodelan Populasi dengan Deret Geometri</h3>
   <a href="https://example.com/documentation">
     Lihat Panduan »
@@ -76,6 +76,11 @@ Untuk menjalankan aplikasi ini, Anda perlu menjalankan perintah berikut:
 ```
 npm run dev
 ```
+atau 
+```
+npm run dev -- --host
+```
+Agar aplikasi dapat diakses melalui browser secara mobile, tambahkan flag `--host` Dapatkan link localhost, lalu buka di browser Anda.
 
 ## Kontributor
 Berikut ini adalah daftar kontributor yang telah berkontribusi pada project ini:
@@ -95,14 +100,13 @@ Berikut ini adalah daftar kontributor yang telah berkontribusi pada project ini:
     <td align="center"><a href="https://github.com/Maruzensky98"><img src="https://avatars.githubusercontent.com/u/188300531?v=4" width="100px;" alt=""/><br /><sub><b>Ginanjar Abdul Hakim</b></sub></a><br /><a href="https://github.com/Maruzensky98/project-geometpop-kalkulus-II/commits/main/?author=Maruzensky98" title="Design">🎨</a></td>
     <td align="center"><a href="https://github.com/Discbrake023"><img src="https://avatars.githubusercontent.com/u/208813556?v=4" width="100px;" alt=""/><br /><sub><b>Tazril Dwi Aprila</b></sub></a><br /><a href="https://github.com/Discbrake023/project-geometpop-kalkulus-II/commits/main/?author=Discbrake023" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/username2"><img src="https://avatars.githubusercontent.com/u/7654321?v=4" width="100px;" alt=""/><br /><sub><b>Username2</b></sub></a><br /><a href="https://github.com/username/repo/commits?author=username2" title="Documentation">👀🤔</a></td>
-    <td align="center"><a href="https://github.com/username2"><img src="https://avatars.githubusercontent.com/u/7654321?v=4" width="100px;" alt=""/><br /><sub><b>Username2</b></sub></a><br /><a href="https://github.com/username/repo/commits?author=username2" title="Documentation">📖</a></td>
   </tr>
 </table>
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
 
 ## Sumber Daya
-Project ini menggunakan beberapa sumber daya tambahan dari teknologi berikut:
+Project ini menggunakan beberapa sumber daya tambahan yang menurut kami memberikan manfaat dan inspirasi:
 
 - [Google Fonts](https://fonts.google.com/)
 - [Lucide](https://lucide.dev/)
