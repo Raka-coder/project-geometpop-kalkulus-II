@@ -3,23 +3,23 @@ import CardImage1 from '@/assets/carousel_1.png'
 import CardImage2 from '@/assets/carousel_2.png'
 import CardImage3 from '@/assets/carousel_3.png'
 
-export function WebsiteShowcase() {
+function WebsiteShowcase() {
   const websitePreviews = [
     {
       src: CardImage1,
-      alt: 'E-commerce Website',
+      alt: 'Geometpop',
       title: 'Pelajari Geometri untuk Kalkulus',
       description: 'Belajar Geometri dan Kalkulus dengan mudah dan menyenangkan',
     },
     {
       src: CardImage2,
-      alt: 'Portfolio Website',
+      alt: 'Pemodelan Pertumbuhan Populasi',
       title: 'Hitung Pertumbuhan Populasi',
       description: 'Visualisasi pertumbuhan populasi dengan deret geometri',
     },
     {
       src: CardImage3,
-      alt: 'Corporate Website',
+      alt: 'Materi Deret Geometri',
       title: 'Pelajari Materi Deret Geometri',
       description: 'Materi Deret Geometri untuk Kalkulus',
     },
@@ -35,3 +35,5 @@ export function WebsiteShowcase() {
     </div>
   )
 }
+
+export default WebsiteShowcase
