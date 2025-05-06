@@ -1,5 +1,10 @@
 import TeamSection from './ui/card-team';
 import type { TeamMember } from '@/types/team';
+// import GinanjarImg from '@/assets/team-1.jpg';
+// import LuthfiImg from '@/assets/team-2.jpg';
+// import RossyadaImg from '@/assets/team-3.jpg';
+// import RakaImg from '@/assets';
+// import TazrilImg from '@/assets';
 
 const name = [
   'Ginanjar Abdul Hakim',
@@ -17,60 +22,42 @@ const jobTitles = [
   'Marketing Director',
 ];
 
+const instagramLinks = [
+  'https://instagram.com/ginanjar_d98',
+  'https://instagram.com/lthfiiaa',
+  'https://instagram.com/rosyadaadly',
+  'https://instagram.com/rakresptra',
+  'https://instagram.com/thislifeisnt_omoshiroi',
+];
+
+const linkedinLinks = [
+  'https://linkedin.com/in/ginanjarabdulhakim',
+  'https://linkedin.com/in/luthfiapriliansyah',
+  'https://linkedin.com/in/rossyadaadly',
+  'https://linkedin.com/in/rakaresptra',
+  'https://linkedin.com/in/tazrildwiaprla',
+];
+
+const photos = [
+  // GinanjarImg,
+  // LuthfiImg,
+  // RossyadaImg,
+  // RakaImg,
+  // TazrilImg,
+];
+
 export default function CardTeam() {
   // Sample team members data
-  const teamMembers: TeamMember[] = [
-    {
-      id: '1',
-      name: name[0],
-      jobTitle: jobTitles[0],
-      photoUrl: '/placeholder-svgrepo-com.svg',
-      socialLinks: {
-        github: 'https://github.com/sarahjohnson',
-        linkedin: 'https://linkedin.com/in/sarahjohnson',
-      },
+  const teamMembers: TeamMember[] = Array.from({ length: 5 }).map((_, i) => ({
+    id: `${i + 1}`,
+    name: name[i],
+    jobTitle: jobTitles[i],
+    photoUrl: photos[i],
+    socialLinks: {
+      instagram: instagramLinks[i],
+      linkedin: linkedinLinks[i],
     },
-    {
-      id: '2',
-      name: name[1],
-      jobTitle: jobTitles[1],
-      photoUrl: '/placeholder-svgrepo-com.svg',
-      socialLinks: {
-        github: 'https://github.com/michaelchen',
-        linkedin: 'https://linkedin.com/in/michaelchen',
-      },
-    },
-    {
-      id: '3',
-      name: name[2],
-      jobTitle: jobTitles[2],
-      photoUrl: '/placeholder-svgrepo-com.svg',
-      socialLinks: {
-        github: 'https://github.com/aishapatel',
-        linkedin: 'https://linkedin.com/in/aishapatel',
-      },
-    },
-    {
-      id: '4',
-      name: name[3],
-      jobTitle: jobTitles[3],
-      photoUrl: '/placeholder-svgrepo-com.svg',
-      socialLinks: {
-        github: 'https://github.com/Raka-coder',
-        linkedin: 'https://linkedin.com/in/davidrodriguez',
-      },
-    },
-    {
-      id: '5',
-      name: name[4],
-      jobTitle: jobTitles[4],
-      photoUrl: '/placeholder-svgrepo-com.svg',
-      socialLinks: {
-        github: 'https://github.com/emmawilson',
-        linkedin: 'https://linkedin.com/in/emmawilson',
-      },
-    },
-  ];
+  }));
 
   return (
     <main className="py-12 bg-custom-gray/20">
@@ -78,3 +65,4 @@ export default function CardTeam() {
     </main>
   );
 }
+
