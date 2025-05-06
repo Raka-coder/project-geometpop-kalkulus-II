@@ -37,9 +37,9 @@ const ManualBookViewer = () => {
             <Button
               onClick={closeModal}
               variant="ghost"
-              className="absolute top-2 right-2 text-gray-600 hover:text-gray-800 text-sm md:top-4 md:right-4 sm:top-4 sm:right-4"
+              className="absolute top-1.5 right-1.5 text-gray-600 hover:text-gray-800 text-sm md:top-4 md:right-4 sm:top-4 sm:right-4"
             >
-              <X className="h-6 w-6" />
+              <X className="h-8 w-8 md:h-6 md:w-6" />
             </Button>
 
             {/* Judul Modal */}
