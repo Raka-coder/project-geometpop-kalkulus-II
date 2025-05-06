@@ -81,7 +81,7 @@ Agar aplikasi dapat diakses melalui browser secara mobile, tambahkan flag `--hos
 ## Kontributor
 Berikut ini adalah daftar kontributor yang telah berkontribusi pada project ini:
 
-- Ginanjar Abdul Hakim
+- Ginanjar Abdul Hakim (Aston Martin)
 - Luthfi Apriliansyah
 - Raka Restu Saputra
 - Rossyada Adly
