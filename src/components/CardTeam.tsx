@@ -10,9 +10,9 @@ const name = [
 ];
 
 const jobTitles = [
-  'CEO & Founder',
+  'UI Designer',
   'CTO',
-  'Lead Designer',
+  'Web Analyst',
   'Developer',
   'Marketing Director',
 ];
