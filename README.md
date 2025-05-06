@@ -99,7 +99,7 @@ Berikut ini adalah daftar kontributor yang telah berkontribusi pada project ini:
     " title="Code">💻🤔</a></td>
     <td align="center"><a href="https://github.com/Maruzensky98"><img src="https://avatars.githubusercontent.com/u/188300531?v=4" width="100px;" alt=""/><br /><sub><b>Ginanjar Abdul Hakim</b></sub></a><br /><a href="https://github.com/Maruzensky98/project-geometpop-kalkulus-II/commits/main/?author=Maruzensky98" title="Design">🎨</a></td>
     <td align="center"><a href="https://github.com/Discbrake023"><img src="https://avatars.githubusercontent.com/u/208813556?v=4" width="100px;" alt=""/><br /><sub><b>Tazril Dwi Aprila</b></sub></a><br /><a href="https://github.com/Discbrake023/project-geometpop-kalkulus-II/commits/main/?author=Discbrake023" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://github.com/kaizen191010"><img src="https://avatars.githubusercontent.com/u/207957055?v=4" width="100px;" alt=""/><br /><sub><b>Rossyada Adly</b></sub></a><br /><a href="https://github.com/kaizen191010/project-geometpop-kalkulus-II/commits/main/?author=kaizen191010" title="Documentation">👀🤔</a></td>
+    <td align="center"><a href="https://github.com/kaizen191010"><img src="https://avatars.githubusercontent.com/u/207957055?v=4" width="100px;" alt=""/><br /><sub><b>Rossyada Adly</b></sub></a><br /><a href="https://github.com/kaizen191010/project-geometpop-kalkulus-II/commits/main/?author=kaizen191010" title="Analyst">👀🤔</a></td>
   </tr>
 </table>
 
