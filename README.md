@@ -1,7 +1,3 @@
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-![Contributors](https://img.shields.io/github/contributors/Raka-coder/project-geometpop-kalkulus-II?style=for-the-badge&color=green&logo=github)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
-
 ## Project GeometPop - Kalkulus II
 
 <br>
@@ -99,6 +95,7 @@ Berikut ini adalah daftar kontributor yang telah berkontribusi pada project ini:
     " title="Code">💻🤔</a></td>
     <td align="center"><a href="https://github.com/Maruzensky98"><img src="https://avatars.githubusercontent.com/u/188300531?v=4" width="100px;" alt=""/><br /><sub><b>Ginanjar Abdul Hakim</b></sub></a><br /><a href="https://github.com/Maruzensky98/project-geometpop-kalkulus-II/commits/main/?author=Maruzensky98" title="Design">🎨</a></td>
     <td align="center"><a href="https://github.com/Discbrake023"><img src="https://avatars.githubusercontent.com/u/208813556?v=4" width="100px;" alt=""/><br /><sub><b>Tazril Dwi Aprila</b></sub></a><br /><a href="https://github.com/Discbrake023/project-geometpop-kalkulus-II/commits/main/?author=Discbrake023" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/Luthfi778"><img src="https://avatars.githubusercontent.com/u/187236290?v=4" width="100px;" alt=""/><br /><sub><b>Luthfi Apriliansyah</b></sub></a><br /><a href="https://github.com/Discbrake023/project-geometpop-kalkulus-II/commits/main/?author=Luthfi778" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/kaizen191010"><img src="https://avatars.githubusercontent.com/u/207957055?v=4" width="100px;" alt=""/><br /><sub><b>Rossyada Adly</b></sub></a><br /><a href="https://github.com/kaizen191010/project-geometpop-kalkulus-II/commits/main/?author=kaizen191010" title="Analyst">👀🤔</a></td>
   </tr>
 </table>
