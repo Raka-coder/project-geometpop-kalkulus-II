@@ -4,7 +4,7 @@ export interface TeamMember {
   jobTitle: string;
   photoUrl: string;
   socialLinks: {
-    github?: string;
+    instagram?: string;
     linkedin?: string;
   };
 }
