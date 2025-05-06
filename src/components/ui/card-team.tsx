@@ -1,4 +1,6 @@
-import { Github, Linkedin } from 'lucide-react';
+import { Instagram, Linkedin } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Card, CardContent } from '@/components/ui/card';
 import type { TeamMember } from '@/types/team';
@@ -14,9 +16,21 @@ export default function TeamSection({ members }: TeamSectionProps) {
         Tim Kami
       </h2>
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5">
-        {members.map((member) => (
-          <TeamCard key={member.id} member={member} />
-        ))}
+        <AnimatePresence>
+          {members.map((member, index) => (
+            <motion.div
+              key={member.id}
+              initial={{ opacity: 0,  y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.8, ease: 'easeOut', delay: index * 0.2 }}
+              viewport={{ once: false }}
+            >
+              <TeamCard member={member} />
+            </motion.div>
+          ))}
+        </AnimatePresence>
       </div>
     </section>
   );
@@ -28,7 +42,7 @@ interface TeamCardProps {
 
 function TeamCard({ member }: TeamCardProps) {
   return (
-    <Card className="h-full overflow-hidden transition-all duration-300 hover:shadow-lg">
+    <Card className="h-full overflow-hidden duration-300 hover:shadow-lg transition-shadow">
       <CardContent className="p-0">
         <div className="flex flex-col items-center p-6">
           <Avatar className="w-24 h-24 mb-4 border-2 border-primary">
@@ -54,7 +68,7 @@ function TeamCard({ member }: TeamCardProps) {
                 className="p-2 transition-colors rounded-full hover:bg-muted"
                 aria-label={`${member.name}'s GitHub`}
               >
-                <Github className="w-5 h-5" />
+                <Instagram strokeWidth={2.25} className="w-5 h-5 text-pink-700" />
               </a>
             )}
 
@@ -85,3 +99,4 @@ function getInitials(name: string): string {
     .toUpperCase()
     .substring(0, 2);
 }
+
