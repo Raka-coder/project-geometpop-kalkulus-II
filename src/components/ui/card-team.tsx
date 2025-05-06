@@ -60,9 +60,9 @@ function TeamCard({ member }: TeamCardProps) {
             {member.jobTitle}
           </p>
           <div className="flex space-x-1">
-            {member.socialLinks.github && (
+            {member.socialLinks.instagram && (
               <a
-                href={member.socialLinks.github}
+                href={member.socialLinks.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 transition-colors rounded-full hover:bg-muted"
