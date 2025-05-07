@@ -15,11 +15,16 @@
 **URL**: https://geometpop.pages.dev/
 
 ## Deskripsi
+Pada project ini kami membuat aplikasi web yang dapat digunakan untuk menghitung pemodelan populasi dengan deret geometri. Aplikasi ini ditujukan untuk membantu mahasiswa dalam memahami konsep pemodelan populasi dengan deret geometri.
 
 ## Preview
 
 
 ## Fitur Utama
+
+- **Pemodelan Populasi** 📐 : Menghitung pemodelan populasi dengan deret geometri.
+- **Visualisasi** 📈: Menampilkan hasil pemodelan populasi dengan grafik.
+- **Panduan** 📖 : Menampilkan panduan penggunaan aplikasi.
 
 ## Teknologi yang Digunakan
 
@@ -81,7 +86,7 @@ Agar aplikasi dapat diakses melalui browser secara mobile, tambahkan flag `--hos
 ## Kontributor
 Berikut ini adalah daftar kontributor yang telah berkontribusi pada project ini:
 
-- Ginanjar Abdul Hakim (Aston Martin)
+- Ginanjar Abdul Hakim
 - Luthfi Apriliansyah
 - Raka Restu Saputra
 - Rossyada Adly
