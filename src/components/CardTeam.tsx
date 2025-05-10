@@ -40,7 +40,7 @@ const linkedinLinks = [
 
 const photos = [
   // GinanjarImg,
-  // LuthfiImg,
+  '/images/team/luthfi-removebg-preview.png',
   // RossyadaImg,
   // RakaImg,
   // TazrilImg,
