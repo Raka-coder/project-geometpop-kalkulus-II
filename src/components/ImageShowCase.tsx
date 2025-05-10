@@ -1,7 +1,7 @@
 import { AutoRotatingCarousel } from '@/components/ui/image-carousel'
-import CardImage1 from '@/assets/carousel_1.png'
-import CardImage2 from '@/assets/carousel_2.png'
-import CardImage3 from '@/assets/carousel_3.png'
+import CardImage1 from '@/assets/images/carousel_1.png'
+import CardImage2 from '@/assets/images/carousel_2.png'
+import CardImage3 from '@/assets/images/carousel_3.png'
 
 function WebsiteShowcase() {
   const websitePreviews = [

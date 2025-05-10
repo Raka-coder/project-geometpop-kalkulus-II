@@ -1,10 +1,6 @@
 import TeamSection from './ui/card-team';
 import type { TeamMember } from '@/types/team';
-// import GinanjarImg from '@/assets/team-1.jpg';
-// import LuthfiImg from '@/assets/team-2.jpg';
-// import RossyadaImg from '@/assets/team-3.jpg';
-// import RakaImg from '@/assets';
-// import TazrilImg from '@/assets';
+
 
 const name = [
   'Ginanjar Abdul Hakim',
