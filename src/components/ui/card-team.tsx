@@ -24,7 +24,7 @@ export default function TeamSection({ members }: TeamSectionProps) {
               whileInView={{ opacity: 1, y: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 0.8, ease: 'easeOut', delay: index * 0.2 }}
+              transition={{ duration: 0.6, ease: 'easeOut', delay: index * 0.2 }}
               viewport={{ once: false }}
             >
               <TeamCard member={member} />
