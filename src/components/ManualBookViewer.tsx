@@ -1,22 +1,33 @@
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { X, BookOpen, Download } from 'lucide-react';
 import { Button } from './ui/button';
+import { Alert } from './ui/alert';
+import Panduan from '../assets/documents/Panduan Penggunaan.pdf';
 
 const ManualBookViewer = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [showAlert, setShowAlert] = useState(false);
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
 
   const handleDownload = () => {
-    // Mengarahkan pengguna ke file manual book untuk diunduh
-    window.open('/manual-book.pdf', '_blank');
+    setShowAlert(true);
+    setTimeout(() => {
+      setShowAlert(false);
+      const link = document.createElement('a');
+      link.href = Panduan;
+      link.setAttribute('download', 'Panduan Penggunaan.pdf');
+      link.style.display = 'none';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }, 1500);
   };
 
   return (
     <>
-      {/* Tombol Lihat Manual Book */}
       <Button
         onClick={openModal}
         className="bg-custom-yellow text-dark-blue hover:bg-custom-yellow/90 text-base"
@@ -24,7 +35,6 @@ const ManualBookViewer = () => {
         Lihat Manual Book <BookOpen size={16} />
       </Button>
 
-      {/* Modal */}
       {isModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
           <motion.div
@@ -33,7 +43,6 @@ const ManualBookViewer = () => {
             exit={{ opacity: 0, scale: 0.9 }}
             className="bg-white p-6 rounded-lg shadow-lg w-full max-w-2xl relative"
           >
-            {/* Tombol Tutup Modal */}
             <Button
               onClick={closeModal}
               variant="ghost"
@@ -42,28 +51,38 @@ const ManualBookViewer = () => {
               <X className="h-8 w-8 md:h-6 md:w-6" />
             </Button>
 
-            {/* Judul Modal */}
             <h2 className="text-lg md:text-xl font-bold text-gray-800 mb-4">
               Manual Book GeometPop
             </h2>
 
-            {/* Viewer PDF */}
-            <div className="mb-4 border rounded-lg overflow-hidden">
-              <iframe
-                src="/manual-book.pdf"
-                title="Manual Book"
-                className="w-full h-[280px]"
-              ></iframe>
-            </div>
+            <iframe
+              src={Panduan}
+              title="Manual Book"
+              className="w-full h-[400px]"
+              allowFullScreen
+            ></iframe>
 
-            {/* Tombol Unduh */}
             <Button
               variant="outline"
               onClick={handleDownload}
-              className="bg-custom-yellow text-dark-blue hover:bg-custom-yellow/90 text-base"
+              className="bg-custom-yellow text-dark-blue hover:bg-custom-yellow/90 text-base mt-4"
             >
               Unduh Manual Book <Download size={16} />
             </Button>
+
+            {showAlert && (
+              <Alert variant="default" className="mt-4">
+                <div className="flex justify-between items-center">
+                  <span>Manual book akan diunduh dalam beberapa detik</span>
+                  <button
+                    onClick={() => setShowAlert(false)}
+                    className="text-gray-600 hover:text-gray-800 ml-4"
+                  >
+                    ✕
+                  </button>
+                </div>
+              </Alert>
+            )}
           </motion.div>
         </div>
       )}
@@ -72,3 +91,4 @@ const ManualBookViewer = () => {
 };
 
 export default ManualBookViewer;
+
