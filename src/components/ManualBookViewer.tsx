@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { X, BookOpen, Download } from 'lucide-react';
 import { Button } from './ui/button';
 import { Alert } from './ui/alert';
-import Panduan from '../assets/documents/Panduan Penggunaan.pdf';
+import PDFViewer from './PDFViewer'; // Import komponen PDFViewer
+import Panduan from '/docs/Panduan_Penggunaan.pdf'; // Pastikan path valid
 
 const ManualBookViewer = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -46,21 +47,17 @@ const ManualBookViewer = () => {
             <Button
               onClick={closeModal}
               variant="ghost"
-              className="absolute top-1.5 right-1.5 text-gray-600 hover:text-gray-800 text-sm md:top-4 md:right-4 sm:top-4 sm:right-4"
+              className="absolute top-1.5 right-1.5 text-gray-600 hover:text-gray-800 md:top-4 md:right-4 sm:top-4 sm:right-4"
             >
-              <X className="h-8 w-8 md:h-6 md:w-6" />
+              <X className="w-8 h-8 md:h-6 md:w-6" />
             </Button>
 
             <h2 className="text-lg md:text-xl font-bold text-gray-800 mb-4">
               Manual Book GeometPop
             </h2>
 
-            <iframe
-              src={Panduan}
-              title="Manual Book"
-              className="w-full h-[400px]"
-              allowFullScreen
-            ></iframe>
+            {/* Gunakan komponen PDFViewer */}
+            <PDFViewer pdfUrl={Panduan} />
 
             <Button
               variant="outline"
@@ -78,7 +75,7 @@ const ManualBookViewer = () => {
                     onClick={() => setShowAlert(false)}
                     className="text-gray-600 hover:text-gray-800 ml-4"
                   >
-                    ✕
+                    <X className="h-4 w-4" />
                   </button>
                 </div>
               </Alert>
@@ -91,4 +88,3 @@ const ManualBookViewer = () => {
 };
 
 export default ManualBookViewer;
-
