@@ -221,7 +221,8 @@ function HelpFeedbackForm() {
         <Button
           type="submit"
           disabled={isSubmitting}
-          className="w-full md:w-auto bg-custom-yellow text-dark-blue hover:bg-custom-yellow/90"
+          className="w-full md:w-auto bg-custom-yellow text-dark-blue hover:bg-custom-yellow/90 font-medium"
+          variant="default"
         >
           {isSubmitting ? (
             <>

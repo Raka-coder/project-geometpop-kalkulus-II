@@ -238,7 +238,7 @@ const PopulationCalculator = () => {
 
               <Button
                 onClick={calculatePopulation}
-                className="w-full bg-custom-yellow text-dark-blue hover:bg-custom-yellow/90"
+                className="w-full bg-custom-yellow text-dark-blue hover:bg-custom-yellow/90 font-medium"
               >
                 Hitung Pertumbuhan Populasi
                 <ChevronRight className="ml-2" size={16} />
