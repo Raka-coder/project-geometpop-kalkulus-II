@@ -31,7 +31,7 @@ const ManualBookViewer = () => {
     <>
       <Button
         onClick={openModal}
-        className="bg-custom-yellow text-dark-blue hover:bg-custom-yellow/90 text-base"
+        className="bg-custom-yellow text-dark-blue hover:bg-custom-yellow/90 font-medium"
       >
         Lihat Manual Book <BookOpen size={16} />
       </Button>
