@@ -26,6 +26,7 @@ Pada project ini kami membuat aplikasi web yang dapat digunakan untuk menghitung
 
 - **Pemodelan Populasi** 📐 : Menghitung pemodelan populasi dengan deret geometri.
 - **Visualisasi** 📈: Menampilkan hasil pemodelan populasi dengan grafik.
+- **Kuis** 📝 : Menampilkan kuis tentang pemodelan populasi dengan deret geometri.
 - **Panduan** 📖 : Menampilkan panduan penggunaan aplikasi.
 
 ## Teknologi yang Digunakan
