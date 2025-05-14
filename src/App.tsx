@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
 import { Helmet } from 'react-helmet';
 import { MathJaxContext } from 'better-react-mathjax';
+
 // importing ui
 import { Toaster } from '@/components/ui/toaster';
 import { Toaster as Sonner } from '@/components/ui/sonner';
@@ -38,11 +39,17 @@ const App = () => (
         <Toaster />
         <Sonner />
         <Helmet>
-          {/* <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://trusted.cdn.com;" />
-        <meta http-equiv="X-Frame-Options" content="DENY" />
-        <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
-        <meta http-equiv="Strict-Transport-Security"content="max-age=31536000; includeSubDomains" />
-        <meta name="referrer" content="no-referrer" /> */}
+          <meta
+            http-equiv="Content-Security-Policy"
+            content="default-src 'self'; script-src 'self' https://trusted.cdn.com;"
+          />
+          <meta http-equiv="X-Frame-Options" content="DENY" />
+          <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+          <meta
+            http-equiv="Strict-Transport-Security"
+            content="max-age=31536000; includeSubDomains"
+          />
+          <meta name="referrer" content="no-referrer" />
         </Helmet>
         <BrowserRouter>
           <Navbar />
