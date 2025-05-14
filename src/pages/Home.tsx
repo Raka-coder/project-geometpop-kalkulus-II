@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { Ratio, Box, Rows2 } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 import Hero from '@/components/Hero';
-import WebsiteShowcase  from '@/components/ImageShowCase';
+import WebsiteShowcase from '@/components/ImageShowCase';
 import { QuizCallToAction } from '@/components/QuizAction';
 import CardTeam from '@/components/CardTeam';
 import ManualBookViewer from '@/components/ManualBookViewer';
@@ -36,7 +36,7 @@ const Home = () => {
                 deret geometri ini.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                { }
+                {}
                 <motion.div
                   className="bg-white p-6 rounded-lg shadow-lg"
                   initial={{ opacity: 0, y: 50 }}
@@ -57,7 +57,7 @@ const Home = () => {
                     tingkat pertumbuhan populasi.
                   </p>
                 </motion.div>
-                { }
+                {}
                 <motion.div
                   className="bg-white p-6 rounded-lg shadow-lg"
                   initial={{ opacity: 0, y: 50 }}
@@ -78,7 +78,7 @@ const Home = () => {
                     sebagai jumlah deret geometri terbatas.
                   </p>
                 </motion.div>
-                { }
+                {}
                 <motion.div
                   className="bg-white p-6 rounded-lg shadow-lg"
                   initial={{ opacity: 0, y: 50 }}
@@ -110,11 +110,14 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <section className="py-12 bg-dark-blue" style={{
+        <section
+          className="py-12 bg-dark-blue"
+          style={{
             backgroundImage:
               'radial-gradient(circle, #fca311 1px, transparent 1px)',
             backgroundSize: '30px 30px',
-          }}>
+          }}
+        >
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto py-6">
               <QuizCallToAction />
@@ -122,20 +125,27 @@ const Home = () => {
           </div>
         </section>
         <CardTeam />
-        <section className="py-20 bg-dark-blue">
+        <section
+          className="py-24 bg-dark-blue"
+          style={{
+            backgroundImage:
+              'radial-gradient(circle, #fca311 1px, transparent 1px)',
+            backgroundSize: '30px 30px',
+          }}
+        >
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center max-w-3xl mx-auto py-6">
+            <div className="text-center max-w-3xl mx-auto py-6 bg-white/10 rounded-lg border border-white/20 p-8 shadow-lg">
               <h2 className="text-2xl md:text-3xl font-bold text-custom-yellow mb-6">
                 E-book / Panduan
               </h2>
               <p className="text-lg mb-8 text-custom-gray/100">
                 Manual Book ini memberikan panduan lengkap tentang cara
-                menggunakan aplikasi GeometPop untuk pemodelan pertumbuhan
-                populasi dengan deret geometri.
+                menggunakan aplikasi GeometPop untuk pemodelan populasi dengan
+                deret geometri.
               </p>
               <p className="text-lg mb-8 text-custom-gray/100">
-                Silahkan lihat dan unduh manual book di bawah ini untuk informasi
-                lebih lanjut.
+                Silahkan lihat dan unduh manual book di bawah ini untuk
+                informasi lebih lanjut.
               </p>
               <ManualBookViewer />
             </div>
