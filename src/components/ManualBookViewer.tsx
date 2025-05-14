@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 import { X, BookOpen, Download } from 'lucide-react';
 import { Button } from './ui/button';
 import { Alert } from './ui/alert';
-import PDFViewer from './PDFViewer'; // Import komponen PDFViewer
-import Panduan from '/docs/Panduan_Penggunaan.pdf'; // Pastikan path valid
+import PDFViewer from './PDFViewer'; 
+import Panduan from '/docs/Panduan_Penggunaan.pdf'; 
 
 const ManualBookViewer = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -71,12 +71,12 @@ const ManualBookViewer = () => {
               <Alert variant="default" className="mt-4">
                 <div className="flex justify-between items-center">
                   <span>Manual book akan diunduh dalam beberapa detik</span>
-                  <button
+                  <Button
                     onClick={() => setShowAlert(false)}
                     className="text-gray-600 hover:text-gray-800 ml-4"
                   >
                     <X className="h-4 w-4" />
-                  </button>
+                  </Button>
                 </div>
               </Alert>
             )}
