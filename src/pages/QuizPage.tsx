@@ -16,6 +16,7 @@ import { Badge } from '@/components/ui/badge';
 import { Calculator, BookOpen, NotebookPen, Home } from 'lucide-react';
 import DynamicBreadcrumb from '@/components/BreadCrumb';
 import MathRenderer from '../components/MathRenderer';
+import Footer from '@/components/Footer';
 
 type Question = {
   id: number;
@@ -470,6 +471,7 @@ function QuizPage() {
           </Card>
         </div>
       </div>
+      <Footer />
     </>
   );
 }
