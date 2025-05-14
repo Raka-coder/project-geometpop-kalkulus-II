@@ -48,7 +48,7 @@ const NotFound = () => {
           </p>
           <Button
             asChild
-            className="bg-custom-yellow text-dark-blue hover:bg-custom-yellow/90"
+            className="bg-custom-yellow text-dark-blue hover:bg-custom-yellow/90 font-medium"
           >
             <Link to="/">Kembali ke Beranda</Link>
           </Button>
