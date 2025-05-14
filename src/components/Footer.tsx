@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, DnaIcon, Github } from 'lucide-react';
-import { Button } from './ui/button';
 
 function Footer() {
   const footerItems = [
     { name: 'Beranda', path: '/' },
     { name: 'Tentang Deret', path: '/about' },
     { name: 'Pemodelan', path: '/modeling' },
+    { name: 'Kuis', path: '/quiz' },
     { name: 'Bantuan', path: '/help' },
   ];
 
