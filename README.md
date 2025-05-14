@@ -18,7 +18,9 @@
 Pada project ini kami membuat aplikasi web yang dapat digunakan untuk menghitung pemodelan populasi dengan deret geometri. Aplikasi ini ditujukan untuk membantu mahasiswa dalam memahami konsep pemodelan populasi dengan deret geometri.
 
 ## Preview
-
+<div align="center">
+  <img src="https://github.com/Raka-coder/project-geometpop-kalkulus-II/blob/f06830523c1d21b428fe34fafa716651e2babf13/src/assets/images/previews/geometpop-preview.png" width="100%" />
+</div>
 
 ## Fitur Utama
 
@@ -117,4 +119,3 @@ Project ini menggunakan beberapa sumber daya tambahan yang menurut kami memberik
 - [Reactbits](https://www.reactbits.dev/)
 - [Recharts](https://recharts.org/en-US)
 - [v0.dev](https://v0.dev/)
-
