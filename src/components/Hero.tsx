@@ -45,7 +45,7 @@ const Hero = () => {
             <div className="flex flex-wrap gap-4">
               <Button
                 asChild
-                className="bg-custom-yellow text-dark-blue hover:bg-custom-yellow/90 text-base"
+                className="bg-custom-yellow text-dark-blue hover:bg-custom-yellow/90 font-medium"
               >
                 <Link to="/modeling">
                   Mulai Pemodelan
@@ -55,7 +55,7 @@ const Hero = () => {
               <Button
                 asChild
                 variant="outline"
-                className="bg-dark-blue text-custom-gray hover:bg-dark-blue/90 text-base"
+                className="bg-dark-blue text-custom-gray hover:bg-dark-blue/90 font-medium"
               >
                 <Link to="/about">Pelajari Deret Geometri</Link>
               </Button>
