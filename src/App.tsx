@@ -17,6 +17,7 @@ import Loader from './components/ui/loader';
 const Home = lazy(() => import('@/pages/Home'));
 const ModelingPage = lazy(() => import('@/pages/ModelingPage'));
 const AboutPage = lazy(() => import('@/pages/AboutPage'));
+const QuizPage = lazy(() => import('@/pages/QuizPage'));
 const HelpPage = lazy(() => import('@/pages/HelpPage'));
 const NotFound = lazy(() => import('@/pages/NotFound'));
 
@@ -52,6 +53,7 @@ const App = () => (
                 <Route path="/modeling" element={<ModelingPage />} />
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/help" element={<HelpPage />} />
+                <Route path="/quiz" element={<QuizPage />} />
                 {/* Add more routes as needed */}
                 <Route path="*" element={<NotFound />} />
               </Routes>
