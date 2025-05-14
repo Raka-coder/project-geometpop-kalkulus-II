@@ -45,7 +45,7 @@
     "@react-pdf-viewer/default-layout": "^3.12.0",
     "@tanstack/react-query": "^5.56.2",
     "axios": "^1.9.0",
-    "better-react-mathjax": "^2.0.4-beta1",
+    "better-react-mathjax": "^2.3.0",
     "caniuse-lite": "^1.0.30001713",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
