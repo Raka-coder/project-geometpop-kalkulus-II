@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, DnaIcon, Github } from 'lucide-react';
+import { DnaIcon, Github } from 'lucide-react';
 
 function Footer() {
   const footerItems = [
