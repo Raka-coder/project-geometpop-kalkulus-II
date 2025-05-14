@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 import { X, BookOpen, Download } from 'lucide-react';
 import { Button } from './ui/button';
 import { Alert } from './ui/alert';
-import PDFViewer from './PDFViewer'; 
-import Panduan from '/docs/Panduan_Penggunaan.pdf'; 
+import PDFViewer from './PDFViewer';
+import Panduan from '/docs/Panduan_Penggunaan.pdf';
 
 const ManualBookViewer = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -62,7 +62,7 @@ const ManualBookViewer = () => {
             <Button
               variant="outline"
               onClick={handleDownload}
-              className="bg-custom-yellow text-dark-blue hover:bg-custom-yellow/90 text-base mt-4"
+              className="bg-custom-yellow text-dark-blue hover:bg-custom-yellow/90 font-medium mt-4"
             >
               Unduh Manual Book <Download size={16} />
             </Button>
