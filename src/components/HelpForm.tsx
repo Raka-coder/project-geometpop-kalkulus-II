@@ -32,7 +32,7 @@ type FeedbackFormValues = z.infer<typeof feedbackFormSchema>;
 
 function HelpFeedbackForm() {
   
-const turnstileSiteKey = import.meta.env.VITE_TURNSTILE_SITE_KEY;
+const siteKey = import.meta.env.VITE_TURNSTILE_SITE_KEY;
 const handleVerify = (token) => {
     console.log('Turnstile token:', token);
     // Kirim ke backend untuk verifikasi jika diperlukan
@@ -225,12 +225,12 @@ const handleVerify = (token) => {
             </p>
           )}
         </div>
-        <div className="mb-4">
+
           <Turnstile
-            siteKey={turnstileSiteKey}
+            siteKey={siteKey}
             onSuccess={handleVerify}
           />
-        </div>
+
         <Button
           type="submit"
           disabled={isSubmitting}
