@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const Loader = () => {
   return (
     <StyledWrapper>
-      <div className="flex items-center justify-center min-h-[85vh]">
+      <div className="flex items-center justify-center min-h-[100vh] md:min-h-[100vh]">
         <div className="spinner">
           <div />
           <div />
