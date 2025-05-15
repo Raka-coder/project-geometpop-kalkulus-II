@@ -23,7 +23,7 @@ const AboutPage = () => {
         />
         <link rel="canonical" href="/about" />
       </Helmet>
-      <div className="min-h-screen py-8 bg-custom-gray/10 font-nunitosans">
+      <div className="min-h-screen py-8 bg-custom-gray/20 font-nunitosans">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="mb-4 cursor-pointer">

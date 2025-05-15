@@ -372,7 +372,7 @@ function QuizPage() {
               Ringkasan Konsep
             </h2>
             <div className="prose prose-indigo max-w-none">
-              <h4 className="text-lg font-semibold text-dark-blue">
+              <h4 className="text-lg font-semibold text-dark-blue mb-2">
                 Model Pertumbuhan Geometrik
               </h4>
 
