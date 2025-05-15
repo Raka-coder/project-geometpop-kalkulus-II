@@ -12,6 +12,7 @@ import { TooltipProvider } from '@/components/ui/tooltip';
 // Importing components
 import { LayoutWithNavbar } from '@/components/LayoutWithNavbar';
 import { LayoutWithoutNavbar } from '@/components/LayoutWithoutNavbar';
+import Turnstile from './cloudflare/Turnstile';
 import Loader from './components/ui/loader';
 
 // Importing pages
@@ -21,6 +22,8 @@ const AboutPage = lazy(() => import('@/pages/AboutPage'));
 const QuizPage = lazy(() => import('@/pages/QuizPage'));
 const HelpPage = lazy(() => import('@/pages/HelpPage'));
 const NotFound = lazy(() => import('@/pages/NotFound'));
+
+const SITE_KEY = import.meta.env.VITE_TURNSTILE_SITE_KEY;
 
 const queryClient = new QueryClient();
 
@@ -40,6 +43,7 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <main>
+            <Turnstile siteKey={SITE_KEY} />
             <Suspense fallback={<Loader />}>
               <Routes>
                 <Route element={<LayoutWithNavbar />}>
@@ -62,3 +66,4 @@ const App = () => (
 );
 
 export default App;
+
