@@ -229,7 +229,6 @@ const handleVerify = (token) => {
           <Turnstile
             siteKey={turnstileSiteKey}
             onSuccess={handleVerify}
-            options={{ action: 'feedback' }}
           />
         </div>
         <Button

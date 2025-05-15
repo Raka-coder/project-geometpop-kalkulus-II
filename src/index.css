@@ -65,12 +65,3 @@
     height: 400px; /* Tinggi lebih kecil untuk perangkat mobile */
   }
 }
-
-/* Center the Turnstile widget */
-.turnstile-container {
-  display: flex;
-  position: relative;
-  justify-content: center; /* Horizontal center */
-  align-items: center; /* Vertical center */
-  /* height: 100vh; Full viewport height */
-}
