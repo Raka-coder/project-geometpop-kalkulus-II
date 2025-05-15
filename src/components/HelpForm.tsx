@@ -33,13 +33,9 @@ type FeedbackFormValues = z.infer<typeof feedbackFormSchema>;
 function HelpFeedbackForm() {
   
 const siteKey = import.meta.env.VITE_TURNSTILE_SITE_KEY;
-interface TurnstileVerifyHandler {
-  (token: string): void;
-}
-
-const handleVerify: TurnstileVerifyHandler = (token) => {
-  console.log('Turnstile token:', token);
-  // Kirim ke backend untuk verifikasi jika diperlukan
+const [token, setToken] = useState("");
+const handleVerify: (token: string) => void = (token) => {
+  setToken(token);
 };
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -68,6 +64,7 @@ const handleVerify: TurnstileVerifyHandler = (token) => {
           feedback_type: data.feedbackType,
           message: data.message,
           submitted_at: new Date().toISOString(),
+          token: token
         },
         {
           headers: {
@@ -256,3 +253,4 @@ const handleVerify: TurnstileVerifyHandler = (token) => {
 }
 
 export default HelpFeedbackForm;
+
