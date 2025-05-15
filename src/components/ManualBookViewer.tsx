@@ -72,6 +72,7 @@ const ManualBookViewer = () => {
                 <div className="flex justify-between items-center">
                   <span>Manual book akan diunduh dalam beberapa detik</span>
                   <Button
+                    variant="ghost"
                     onClick={() => setShowAlert(false)}
                     className="text-gray-600 hover:text-gray-800 ml-4"
                   >
