@@ -2,6 +2,7 @@ import { Home, Info } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 import DynamicBreadcrumb from '@/components/BreadCrumb';
 import HelpFeedbackForm from '@/components/HelpForm';
+import FeedbackGuide from '@/components/FeedbackGuide';
 import Footer from '@/components/Footer';
 
 function HelpPage() {
@@ -28,6 +29,7 @@ function HelpPage() {
             </div>
             <h1 className="text-3xl font-bold text-dark-blue mb-6">Bantuan</h1>
             <HelpFeedbackForm />
+            <FeedbackGuide />
           </div>
         </div>
       </div>
