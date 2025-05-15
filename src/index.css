@@ -75,6 +75,8 @@
 }
 
 .cf-turnstile {
+  display: block; /* Ensure it behaves as a block element */
+  margin: 0 auto; /* Center it horizontally */
   width: 200px; /* Default width for Turnstile widget */
   margin: 0 auto; /* Ensure horizontal centering */
 }
