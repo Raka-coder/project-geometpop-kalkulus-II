@@ -2,7 +2,6 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
-import { Helmet } from 'react-helmet';
 import { MathJaxContext } from 'better-react-mathjax';
 
 // importing ui
@@ -38,19 +37,6 @@ const App = () => (
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <Helmet>
-          <meta
-            http-equiv="Content-Security-Policy"
-            content="default-src 'self'; script-src 'self' https://trusted.cdn.com;"
-          />
-          <meta http-equiv="X-Frame-Options" content="DENY" />
-          <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
-          <meta
-            http-equiv="Strict-Transport-Security"
-            content="max-age=31536000; includeSubDomains"
-          />
-          <meta name="referrer" content="no-referrer" />
-        </Helmet>
         <BrowserRouter>
           <Navbar />
           <main>
@@ -61,7 +47,6 @@ const App = () => (
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/help" element={<HelpPage />} />
                 <Route path="/quiz" element={<QuizPage />} />
-                {/* Add more routes as needed */}
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </Suspense>
