@@ -60,7 +60,17 @@
       }
     };
   </script>
-  <div class="cf-turnstile" data-sitekey="0x4AAAAAABdViKB4FngjhCAX" data-callback="onTurnstileSubmit"></div>
+  <style>
+    .turnstile-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+  </style>
+  <div class="turnstile-container">
+    <div class="cf-turnstile" data-sitekey="0x4AAAAAABdViKB4FngjhCAX" data-callback="onTurnstileSubmit"></div>
+  </div>
 </body>
 
 </html>
