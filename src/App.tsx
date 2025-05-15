@@ -10,7 +10,8 @@ import { Toaster as Sonner } from '@/components/ui/sonner';
 import { TooltipProvider } from '@/components/ui/tooltip';
 
 // Importing components
-import Navbar from '@/components/Navbar';
+import { LayoutWithNavbar } from '@/components/LayoutWithNavbar';
+import { LayoutWithoutNavbar } from '@/components/LayoutWithoutNavbar';
 import Loader from './components/ui/loader';
 
 // Importing pages
@@ -38,16 +39,19 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
-          <Navbar />
           <main>
             <Suspense fallback={<Loader />}>
               <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/modeling" element={<ModelingPage />} />
-                <Route path="/about" element={<AboutPage />} />
-                <Route path="/help" element={<HelpPage />} />
-                <Route path="/quiz" element={<QuizPage />} />
-                <Route path="*" element={<NotFound />} />
+                <Route element={<LayoutWithNavbar />}>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/modeling" element={<ModelingPage />} />
+                  <Route path="/about" element={<AboutPage />} />
+                  <Route path="/help" element={<HelpPage />} />
+                  <Route path="/quiz" element={<QuizPage />} />
+                </Route>
+                <Route element={<LayoutWithoutNavbar />}>
+                  <Route path="*" element={<NotFound />} />
+                </Route>
               </Routes>
             </Suspense>
           </main>
