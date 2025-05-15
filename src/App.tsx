@@ -43,7 +43,9 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <main>
-            <Turnstile />
+<div className="turnstile-container">
+    <Turnstile />
+  </div>
             <Suspense fallback={<Loader />}>
               <Routes>
                 <Route element={<LayoutWithNavbar />}>
