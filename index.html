@@ -47,6 +47,20 @@
   <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
   <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
   <script type="module" src="/src/main.tsx"></script>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  <script>
+    window.onload = function () {
+      const turnstile = document.querySelector('#cf-turnstile');
+      if (turnstile) {
+        turnstile.setAttribute('data-cf-turnstile', 'on');
+        turnstile.setAttribute('data-cf-turnstile-action', 'homepage');
+      }
+      if (turnstile) {
+        turnstile.style.display = 'block';
+      }
+    };
+  </script>
+  <div class="cf-turnstile" data-sitekey="0x4AAAAAABdViKB4FngjhCAX" data-callback="onTurnstileSubmit"></div>
 </body>
 
 </html>
