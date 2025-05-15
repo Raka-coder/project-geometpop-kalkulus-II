@@ -1,8 +1,8 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
-import RobotNotFound from '@/assets/robot.webp';
 import { Button } from '@/components/ui/button';
+import RobotNotFound from '@/assets/robot.webp';
 
 const NotFound = () => {
   const location = useLocation();
@@ -28,7 +28,7 @@ const NotFound = () => {
         />
         <link rel="canonical" href="/404" />
       </Helmet>
-      <div className="min-h-{window.innerHeight} flex items-center justify-center font-nunitosans">
+      <div className="min-h-screen flex items-center justify-center font-nunitosans bg-custom-gray/10">
         <div className="text-center pt-12">
           <img
             src={RobotNotFound}
