@@ -18,14 +18,6 @@ const FAQ = () => {
       answer:
         'Deret geometri digunakan karena pola pertumbuhan populasi sering kali mengikuti rasio tetap (misalnya, pertumbuhan eksponensial), yang dapat direpresentasikan dengan rumus P(t) = P₀(1 + r)ᵗ.',
     },
-
-    {
-      question:
-        'Apa saja contoh aplikasi pemodelan populasi dalam kehidupan sehari-hari?',
-      answer:
-        'Contohnya meliputi memproyeksikan pertumbuhan penduduk suatu negara, memprediksi jumlah hewan liar dalam suatu habitat, atau menentukan kebutuhan sumber daya seperti air, makanan, atau energi berdasarkan proyeksi populasi.',
-    },
-
     {
       question:
         'Apakah saya bisa memasukkan nilai negatif untuk tingkat pertumbuhan (r)?',
