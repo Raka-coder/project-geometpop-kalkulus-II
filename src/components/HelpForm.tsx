@@ -12,6 +12,7 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { Card, CardTitle } from '@/components/ui/card';
+import { Turnstile } from '@marsidev/react-turnstile'
 import { useState } from 'react';
 import { Loader2 } from 'lucide-react';
 import axios from 'axios';
@@ -30,6 +31,13 @@ const feedbackFormSchema = z.object({
 type FeedbackFormValues = z.infer<typeof feedbackFormSchema>;
 
 function HelpFeedbackForm() {
+  
+const turnstileSiteKey = import.meta.env.VITE_TURNSTILE_SITE_KEY;
+const handleVerify = (token) => {
+    console.log('Turnstile token:', token);
+    // Kirim ke backend untuk verifikasi jika diperlukan
+  };
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const [submitError, setSubmitError] = useState('');
@@ -217,7 +225,13 @@ function HelpFeedbackForm() {
             </p>
           )}
         </div>
-
+        <div className="mb-4">
+          <Turnstile
+            siteKey={turnstileSiteKey}
+            onSuccess={handleVerify}
+            options={{ action: 'feedback' }}
+          />
+        </div>
         <Button
           type="submit"
           disabled={isSubmitting}
