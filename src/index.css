@@ -71,10 +71,10 @@
   display: flex;
   justify-content: center; /* Horizontal center */
   align-items: center; /* Vertical center */
-  height: 100vh; /* Full viewport height */
+  /* height: 100vh; Full viewport height */
 }
 
 .cf-turnstile {
-  width: 300px; /* Default width for Turnstile widget */
+  width: 200px; /* Default width for Turnstile widget */
   margin: 0 auto; /* Ensure horizontal centering */
 }
