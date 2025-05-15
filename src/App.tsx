@@ -12,7 +12,7 @@ import { TooltipProvider } from '@/components/ui/tooltip';
 // Importing components
 import { LayoutWithNavbar } from '@/components/LayoutWithNavbar';
 import { LayoutWithoutNavbar } from '@/components/LayoutWithoutNavbar';
-import Turnstile from './cloudflare/Turnstile';
+import Turnstile from '@/cloudflare/Turnstile';
 import Loader from './components/ui/loader';
 
 // Importing pages
@@ -43,7 +43,7 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <main>
-            <Turnstile siteKey={SITE_KEY} />
+            <Turnstile />
             <Suspense fallback={<Loader />}>
               <Routes>
                 <Route element={<LayoutWithNavbar />}>
