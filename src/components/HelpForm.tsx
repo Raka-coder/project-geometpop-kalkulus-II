@@ -11,7 +11,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-import { Card } from '@/components/ui/card';
+import { Card, CardTitle } from '@/components/ui/card';
 import { useState } from 'react';
 import { Loader2 } from 'lucide-react';
 import axios from 'axios';
@@ -111,7 +111,7 @@ function HelpFeedbackForm() {
 
   return (
     <Card className="p-6 mx-auto">
-      <h2 className="text-2xl font-bold mb-6">Kirim Feedback ke Developer</h2>
+      <CardTitle className="text-2xl text-dark-blue font-semibold mb-6">Kirim Feedback ke Developer</CardTitle>
       <p className="mb-6 text-gray-700">
         Kami sangat menghargai masukan Anda untuk membantu kami meningkatkan
         website ini.
