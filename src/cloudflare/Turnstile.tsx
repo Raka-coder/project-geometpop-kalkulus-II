@@ -9,6 +9,15 @@ const Turnstile = ({ siteKey }) => {
     script.defer = true;
     document.body.appendChild(script);
 
+    // Set turnstile attributes on load
+    script.onload = () => {
+      const turnstile = document.querySelector('.cf-turnstile');
+      if (turnstile) {
+        turnstile.setAttribute('data-cf-turnstile', 'on');
+        
+      }
+    };
+
     // Cleanup script on component unmount
     return () => {
       document.body.removeChild(script);
