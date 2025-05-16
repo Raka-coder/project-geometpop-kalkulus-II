@@ -105,7 +105,7 @@ const Home = () => {
         </section>
         <section className="py-8 bg-custom-gray/20">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto py-6">
+            <div className="max-w-3xl mx-auto pb-16">
               <WebsiteShowcase />
             </div>
           </div>
