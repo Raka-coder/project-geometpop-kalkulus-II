@@ -4,7 +4,7 @@ import { X, BookOpen, Download } from 'lucide-react';
 import { Button } from './ui/button';
 import { Alert } from './ui/alert';
 import PDFViewer from './PDFViewer';
-import Panduan from '/docs/Panduan_Penggunaan.pdf';
+import Panduan from '/docs/Panduan-Penggunaan.pdf';
 
 const ManualBookViewer = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
