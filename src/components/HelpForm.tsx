@@ -31,23 +31,6 @@ const feedbackFormSchema = z.object({
 type FeedbackFormValues = z.infer<typeof feedbackFormSchema>;
 
 function HelpFeedbackForm() {
-  const TURNSTILE_SITE_KEY = import.meta.env.VITE_TURNSTILE_SITE_KEY;
-
-  const [token, setToken] = useState<string | null>(null);
-  const [error, setError] = useState<string | null>(null);
-  const onVerify = (token: string) => {
-    setToken(token);
-    setError(null);
-    console.log('Turnstile token:', token);
-  };
-  const onError = () => {
-    setError('Turnstile verification failed. Please try again.');
-    setToken(null);
-  };
-  const onExpire = () => {
-    setToken(null);
-    setError('Turnstile token expired. Please refresh the page.');
-  };
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
@@ -234,16 +217,6 @@ function HelpFeedbackForm() {
             <p className="text-red-500 text-sm mt-1">
               {form.formState.errors.message.message}
             </p>
-          )}
-        </div>
-        <div className="flex items-center mb-4">
-          <Turnstile
-            siteKey={TURNSTILE_SITE_KEY}
-            onError={onError}
-            onExpire={onExpire}
-          />
-          {error && (
-            <p className="text-red-500 text-sm mt-1 ml-2">{error}</p>
           )}
         </div>
         <Button
