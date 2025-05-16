@@ -220,24 +220,13 @@ function HelpFeedbackForm() {
             </p>
           )}
         </div>
-          <Turnstile
-            siteKey={import.meta.env.VITE_TURNSTILE_SITE_KEY}
-            onSuccess={(token) => {
-              setToken(token);
-            }}
-            onError={() => {
-              setToken(null);
-            }}
-            onExpire={() => {
-              setToken(null);
-            }}
-            className="mt-4"
-            options={{
-              theme: 'light',
-              action: 'submit',
-            }}
-            
-          />
+        <Turnstile
+          siteKey={import.meta.env.VITE_TURNSTILE_SITE_KEY}
+          onSuccess={setToken}
+          options={{
+            theme: 'light',
+          }}
+        />
         <Button
           type="submit"
           disabled={isSubmitting}
