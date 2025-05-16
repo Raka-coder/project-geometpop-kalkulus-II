@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -24,15 +25,34 @@ import {
 import { useToast } from '@/components/ui/use-toast';
 import MathRenderer from './MathRenderer';
 
+// Helper function to parse number inputs with comma as decimal separator
+const parseCommaNumber = (value: string): number => {
+  if (!value) return 0;
+  // Replace commas with dots for proper parsing
+  return parseFloat(value.replace(',', '.'));
+};
+
+// Helper function to format number with comma as decimal separator
+const formatCommaNumber = (value: number): string => {
+  if (isNaN(value)) return '';
+  // Convert to string with dots as decimal separator and then replace with comma
+  return value.toString().replace('.', ',');
+};
+
 const PopulationCalculator = () => {
   const { toast } = useToast();
 
-  // Form inputs
-  const [initialPopulation, setInitialPopulation] = useState<number>(100);
-  const [growthRate, setGrowthRate] = useState<number>(0.05);
+  // Form inputs (using string for input values to handle comma separators)
+  const [initialPopulationStr, setInitialPopulationStr] = useState<string>('100');
+  const [growthRateStr, setGrowthRateStr] = useState<string>('0,05');
   const [periods, setPeriods] = useState<number>(20);
   const [useCarryingCapacity, setUseCarryingCapacity] =
     useState<boolean>(false);
+  const [carryingCapacityStr, setCarryingCapacityStr] = useState<string>('1000');
+
+  // Parsed numeric values
+  const [initialPopulation, setInitialPopulation] = useState<number>(100);
+  const [growthRate, setGrowthRate] = useState<number>(0.05);
   const [carryingCapacity, setCarryingCapacity] = useState<number>(1000);
 
   // Calculation results
@@ -41,6 +61,13 @@ const PopulationCalculator = () => {
   const [doublingTime, setDoublingTime] = useState<number>(0);
   const [totalIndividuals, setTotalIndividuals] = useState<number>(0);
   const [infiniteSum, setInfiniteSum] = useState<number | null>(null);
+
+  // Update parsed numeric values when string inputs change
+  useEffect(() => {
+    setInitialPopulation(parseCommaNumber(initialPopulationStr));
+    setGrowthRate(parseCommaNumber(growthRateStr));
+    setCarryingCapacity(parseCommaNumber(carryingCapacityStr));
+  }, [initialPopulationStr, growthRateStr, carryingCapacityStr]);
 
   // Calculate population based on current inputs
   const calculatePopulation = () => {
@@ -146,16 +173,12 @@ const PopulationCalculator = () => {
                   <Label htmlFor="initial-population">Populasi Awal (P₀)</Label>
                   <Input
                     id="initial-population"
-                    type="number"
-                    value={initialPopulation}
-                    onChange={(e) =>
-                      setInitialPopulation(Number(e.target.value))
-                    }
-                    min="1"
-                    step="1"
+                    type="text"
+                    value={initialPopulationStr}
+                    onChange={(e) => setInitialPopulationStr(e.target.value)}
                   />
                   <p className="text-sm text-muted-foreground">
-                    Jumlah individu pada awal periode
+                    Jumlah individu pada awal periode (gunakan koma untuk desimal, contoh: 100,5)
                   </p>
                 </div>
 
@@ -164,20 +187,17 @@ const PopulationCalculator = () => {
                   <div className="flex items-center space-x-2">
                     <Input
                       id="growth-rate"
-                      type="number"
-                      value={growthRate}
-                      onChange={(e) => setGrowthRate(Number(e.target.value))}
-                      min="-0.99"
-                      max="10"
-                      step="0.01"
+                      type="text"
+                      value={growthRateStr}
+                      onChange={(e) => setGrowthRateStr(e.target.value)}
                       className="flex-1"
                     />
                     <span className="w-10 text-center">
-                      {(growthRate * 100).toFixed(0)}%
+                      {(parseCommaNumber(growthRateStr) * 100).toFixed(0)}%
                     </span>
                   </div>
                   <p className="text-sm text-muted-foreground">
-                    Rasio pertumbuhan per periode (desimal)
+                    Rasio pertumbuhan per periode (desimal, gunakan koma, contoh: 0,05)
                   </p>
                 </div>
               </div>
@@ -221,17 +241,13 @@ const PopulationCalculator = () => {
                   <Label htmlFor="carrying-capacity">Daya Dukung (K)</Label>
                   <Input
                     id="carrying-capacity"
-                    type="number"
-                    value={carryingCapacity}
-                    onChange={(e) =>
-                      setCarryingCapacity(Number(e.target.value))
-                    }
-                    min={initialPopulation}
-                    step="10"
+                    type="text"
+                    value={carryingCapacityStr}
+                    onChange={(e) => setCarryingCapacityStr(e.target.value)}
                   />
                   <p className="text-sm text-muted-foreground">
                     Kapasitas maksimum populasi yang dapat didukung oleh
-                    lingkungan
+                    lingkungan (gunakan koma untuk desimal, contoh: 1000,5)
                   </p>
                 </div>
               )}
