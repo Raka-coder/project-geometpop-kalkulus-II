@@ -33,10 +33,6 @@ type FeedbackFormValues = z.infer<typeof feedbackFormSchema>;
 function HelpFeedbackForm() {
   
 const siteKey = import.meta.env.VITE_TURNSTILE_SITE_KEY;
-const [token, setToken] = useState("");
-const handleVerify: (token: string) => void = (token) => {
-  setToken(token);
-};
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
@@ -64,7 +60,6 @@ const handleVerify: (token: string) => void = (token) => {
           feedback_type: data.feedbackType,
           message: data.message,
           submitted_at: new Date().toISOString(),
-          token: token
         },
         {
           headers: {
@@ -226,12 +221,9 @@ const handleVerify: (token: string) => void = (token) => {
             </p>
           )}
         </div>
-
           <Turnstile
             siteKey={siteKey}
-            onSuccess={handleVerify}
           />
-
         <Button
           type="submit"
           disabled={isSubmitting}
