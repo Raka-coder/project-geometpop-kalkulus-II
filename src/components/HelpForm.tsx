@@ -12,7 +12,7 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { Card, CardTitle } from '@/components/ui/card';
-import { Turnstile } from '@marsidev/react-turnstile'
+import { Turnstile } from '@marsidev/react-turnstile';
 import { useState } from 'react';
 import { Loader2 } from 'lucide-react';
 import axios from 'axios';
@@ -32,10 +32,10 @@ type FeedbackFormValues = z.infer<typeof feedbackFormSchema>;
 
 function HelpFeedbackForm() {
   const [token, setToken] = useState<string | null>(null);
-
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const [submitError, setSubmitError] = useState('');
+  const [turnstileError, setTurnstileError] = useState('');
 
   const form = useForm<FeedbackFormValues>({
     resolver: zodResolver(feedbackFormSchema),
@@ -47,8 +47,15 @@ function HelpFeedbackForm() {
   });
 
   async function onSubmit(data: FeedbackFormValues) {
+    // Validasi Turnstile terlebih dahulu
+    if (!token) {
+      setTurnstileError('Harap verifikasi bahwa Anda bukan robot');
+      return;
+    }
+
     setIsSubmitting(true);
     setSubmitError('');
+    setTurnstileError('');
 
     try {
       const response = await axios.post(
@@ -58,6 +65,7 @@ function HelpFeedbackForm() {
           email: data.email || 'No email provided',
           feedback_type: data.feedbackType,
           message: data.message,
+          turnstile_token: token, // Kirim token ke server
           submitted_at: new Date().toISOString(),
         },
         {
@@ -70,6 +78,7 @@ function HelpFeedbackForm() {
 
       setSubmitSuccess(true);
       form.reset();
+      setToken(null); // Reset token setelah submit berhasil
     } catch (error) {
       console.error('Error submitting feedback:', error);
       setSubmitError(
@@ -113,23 +122,16 @@ function HelpFeedbackForm() {
   }
 
   return (
-    <Card className="p-6 mx-auto">
-      <CardTitle className="text-2xl text-dark-blue font-semibold mb-6">Kirim Feedback ke Developer</CardTitle>
+    <Card className="p-6 mx-auto max-w-3xl">
+      <CardTitle className="text-2xl text-dark-blue font-semibold mb-6">
+        Kirim Feedback ke Developer
+      </CardTitle>
       <p className="mb-6 text-gray-700">
         Kami sangat menghargai masukan Anda untuk membantu kami meningkatkan
         website ini.
       </p>
 
-      <form
-        onSubmit={form.handleSubmit(onSubmit)}
-        className="space-y-6"
-        method="post"
-      >
-        {submitSuccess && (
-          <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded">
-            Feedback Anda telah berhasil dikirim!
-          </div>
-        )}
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
         {submitError && (
           <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
             {submitError}
@@ -220,18 +222,37 @@ function HelpFeedbackForm() {
             </p>
           )}
         </div>
-        <Turnstile
-          siteKey={import.meta.env.VITE_TURNSTILE_SITE_KEY}
-          onSuccess={setToken}
-          options={{
-            theme: 'light',
-          }}
-        />
+
+        {/* Cloudflare Turnstile Widget */}
+        <div className="my-4">
+          <Turnstile
+            siteKey={import.meta.env.VITE_TURNSTILE_SITE_KEY}
+            onSuccess={(token) => {
+              setToken(token);
+              setTurnstileError('');
+            }}
+            onError={() => {
+              setToken(null);
+              setTurnstileError('Verifikasi gagal, silakan coba lagi');
+            }}
+            onExpire={() => {
+              setToken(null);
+              setTurnstileError('Sesi verifikasi telah habis, silakan verifikasi ulang');
+            }}
+            options={{
+              theme: 'light',
+              action: 'feedback-submission' // Optional: untuk analytics di Cloudflare dashboard
+            }}
+          />
+          {turnstileError && (
+            <p className="text-red-500 text-sm mt-2">{turnstileError}</p>
+          )}
+        </div>
+
         <Button
           type="submit"
-          disabled={isSubmitting}
+          disabled={isSubmitting || !token}
           className="w-full md:w-auto bg-custom-yellow text-dark-blue hover:bg-custom-yellow/90 font-medium"
-          variant="default"
         >
           {isSubmitting ? (
             <>
@@ -248,4 +269,3 @@ function HelpFeedbackForm() {
 }
 
 export default HelpFeedbackForm;
-
