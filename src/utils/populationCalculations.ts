@@ -1,4 +1,3 @@
-
 /**
  * Calculate population based on geometric series
  *
@@ -34,7 +33,6 @@ export const calculatePopulationGrowth = (
     }
   }
 
-  // Return the results without rounding
   return results;
 };
 
@@ -119,7 +117,5 @@ export const calculateDoublingTime = (growthRate: number): number => {
     return -1; // Invalid input
   }
 
-  const doublingTime = Math.log(2) / Math.log(1 + growthRate);
-  // Return exact value without rounding
-  return doublingTime;
+  return Math.log(2) / Math.log(1 + growthRate);
 };

@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react';
 import {
   LineChart,
@@ -27,10 +26,9 @@ const PopulationChart = ({
 
   useEffect(() => {
     // Transform the raw population data into the format expected by Recharts
-    // Do not round the values to maintain precision
     const formattedData = populationData.map((population, index) => ({
       period: index,
-      population: population, // Use exact value without rounding
+      population: Math.round(population * 100) / 100, // Round to 2 decimal places
     }));
 
     setChartData(formattedData);
@@ -38,11 +36,11 @@ const PopulationChart = ({
 
   const formatPopulation = (value: number) => {
     if (value >= 1000000) {
-      return `${(value / 1000000).toFixed(2)}M`;
+      return `${(value / 1000000).toFixed(1)}M`;
     } else if (value >= 1000) {
-      return `${(value / 1000).toFixed(2)}K`;
+      return `${(value / 1000).toFixed(1)}K`;
     } else {
-      return value.toFixed(2); // Show 2 decimal places but don't round in calculations
+      return value.toFixed(1);
     }
   };
 
