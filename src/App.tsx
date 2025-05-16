@@ -22,8 +22,6 @@ const QuizPage = lazy(() => import('@/pages/QuizPage'));
 const HelpPage = lazy(() => import('@/pages/HelpPage'));
 const NotFound = lazy(() => import('@/pages/NotFound'));
 
-const SITE_KEY = import.meta.env.VITE_TURNSTILE_SITE_KEY;
-
 const queryClient = new QueryClient();
 
 const config = {
