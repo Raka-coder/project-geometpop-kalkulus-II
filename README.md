@@ -4,7 +4,7 @@
 <div align="center">
 <img src="https://github.com/Raka-coder/project-geometpop-kalkulus-II/blob/main/src/assets/logo/GeometPop_nonbg.png" width="30%" />
   <h3>Pemodelan Populasi dengan Deret Geometri</h3>
-  <a href="">
+  <a href="https://github.com/Raka-coder/project-geometpop-kalkulus-II/blob/98a661b0fc326d9b65d6be798e6755773e0b1f63/public/docs/Panduan-Penggunaan.pdf">
     Lihat Panduan »
   </a>
 </div>
