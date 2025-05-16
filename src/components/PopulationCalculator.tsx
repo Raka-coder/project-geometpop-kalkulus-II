@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -28,7 +27,7 @@ import MathRenderer from './MathRenderer';
 // Helper function to parse number inputs with comma as decimal separator
 const parseCommaNumber = (value: string): number => {
   if (!value) return 0;
-  // Replace commas with dots for proper parsing
+  // Replace commas with dots for proper parsing - maintain full precision
   return parseFloat(value.replace(',', '.'));
 };
 
@@ -36,6 +35,7 @@ const parseCommaNumber = (value: string): number => {
 const formatCommaNumber = (value: number): string => {
   if (isNaN(value)) return '';
   // Convert to string with dots as decimal separator and then replace with comma
+  // Do not round the number, keep full precision
   return value.toString().replace('.', ',');
 };
 
@@ -129,7 +129,7 @@ const PopulationCalculator = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // Format large numbers for display
+  // Format large numbers for display without rounding
   const formatNumber = (num: number): string => {
     if (isNaN(num) || num === Infinity || num === -Infinity) {
       return 'Tidak terdefinisi';
@@ -140,7 +140,7 @@ const PopulationCalculator = () => {
     } else if (num >= 1000) {
       return `${(num / 1000).toFixed(2)} ribu`;
     } else {
-      return num.toFixed(2);
+      return num.toFixed(2); // Keep 2 decimal places for display but don't round in calculations
     }
   };
 
