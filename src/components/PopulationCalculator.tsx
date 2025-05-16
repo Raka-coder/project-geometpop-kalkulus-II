@@ -178,7 +178,7 @@ const PopulationCalculator = () => {
                     onChange={(e) => setInitialPopulationStr(e.target.value)}
                   />
                   <p className="text-sm text-muted-foreground">
-                    Jumlah individu pada awal periode (gunakan koma untuk desimal, contoh: 100,5)
+                    Jumlah individu pada awal periode
                   </p>
                 </div>
 
@@ -197,7 +197,7 @@ const PopulationCalculator = () => {
                     </span>
                   </div>
                   <p className="text-sm text-muted-foreground">
-                    Rasio pertumbuhan per periode (desimal, gunakan koma, contoh: 0,05)
+                    Rasio pertumbuhan per periode
                   </p>
                 </div>
               </div>
@@ -247,7 +247,7 @@ const PopulationCalculator = () => {
                   />
                   <p className="text-sm text-muted-foreground">
                     Kapasitas maksimum populasi yang dapat didukung oleh
-                    lingkungan (gunakan koma untuk desimal, contoh: 1000,5)
+                    lingkungan
                   </p>
                 </div>
               )}
