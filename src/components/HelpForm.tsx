@@ -31,8 +31,7 @@ const feedbackFormSchema = z.object({
 type FeedbackFormValues = z.infer<typeof feedbackFormSchema>;
 
 function HelpFeedbackForm() {
-  
-const siteKey = import.meta.env.VITE_TURNSTILE_SITE_KEY;
+  const [token, setToken] = useState<string | null>(null);
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
@@ -222,7 +221,22 @@ const siteKey = import.meta.env.VITE_TURNSTILE_SITE_KEY;
           )}
         </div>
           <Turnstile
-            siteKey={siteKey}
+            siteKey={import.meta.env.VITE_TURNSTILE_SITE_KEY}
+            onSuccess={(token) => {
+              setToken(token);
+            }}
+            onError={() => {
+              setToken(null);
+            }}
+            onExpire={() => {
+              setToken(null);
+            }}
+            className="mt-4"
+            options={{
+              theme: 'light',
+              action: 'submit',
+            }}
+            
           />
         <Button
           type="submit"
