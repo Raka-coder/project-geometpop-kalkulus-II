@@ -26,7 +26,7 @@ function WebsiteShowcase() {
   ]
 
   return (
-    <div className="mx-auto max-w-3xl">
+    <div className="mx-auto max-w-2xl">
       <AutoRotatingCarousel 
         images={websitePreviews}
         interval={2000} // 2 second delay

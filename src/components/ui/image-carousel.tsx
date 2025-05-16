@@ -14,7 +14,7 @@ interface AutoCarouselProps {
 
 export const AutoRotatingCarousel = ({
   images,
-  interval = 5000,
+  interval = 3000,
   className,
 }: AutoCarouselProps) => {
   const [activeIndex, setActiveIndex] = useState(0)
@@ -45,7 +45,7 @@ export const AutoRotatingCarousel = ({
   return (
     <div
       className={cn(
-        'relative w-full overflow-hidden rounded-xl shadow-lg',
+        'relative w-full overflow-hidden rounded-lg shadow-lg',
         className
       )}
       onMouseEnter={handleMouseEnter}
