@@ -30,9 +30,7 @@
   <!-- Nunito Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
 
   <!-- Source Code Pro -->
   <link rel="preconnect" href="https://fonts.googleapis.com  ">
@@ -47,44 +45,30 @@
   <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
   <script src="https://cdn.gpteng.co/gptengineer.js  " type="module"></script>
   <script type="module" src="/src/main.tsx"></script>
-
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js  " async defer></script>
+  
   <!-- Cloudflare Turnstile Widget -->
   <div class="turnstile-container">
-    <div class="cf-turnstile" id="turnstile-widget" data-sitekey="" data-callback="onTurnstileSubmit">
+    <div
+      class="cf-turnstile"
+      data-sitekey="0x4AAAAAABdhSDHjm_aMxiJ3"
+      data-callback="onTurnstileSubmit">
     </div>
   </div>
 
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      // Load Turnstile script dynamically
-      const script = document.createElement('script');
-      script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js ';
-      script.async = true;
-      script.defer = true;
-      document.body.appendChild(script);
-
-      // Set Site Key after script is loaded
-      script.onload = () => {
-        const turnstileWidget = document.getElementById('turnstile-widget');
-        if (turnstileWidget) {
-          turnstileWidget.setAttribute('data-sitekey', import.meta.env.VITE_TURNSTILE_SITE_KEY);
-        }
-      };
-    });
-
     function onTurnstileSubmit(token) {
       console.log('Turnstile verification successful. Token:', token);
 
-      // Hide the Turnstile widget
+      // Sembunyikan widget Turnstile
       const turnstileContainer = document.querySelector('.turnstile-container');
       if (turnstileContainer) {
         turnstileContainer.style.display = 'none';
       }
 
-      // You can add additional logic here, such as sending the token to the server.
+      // Anda juga bisa menambahkan logika lain di sini, seperti mengirim token ke server.
     }
   </script>
-
 </body>
 
 </html>
