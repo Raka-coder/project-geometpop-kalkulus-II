@@ -40,6 +40,15 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
     rel="stylesheet">
+
+    <style>
+      .turnstile-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+      }
+    </style>
 </head>
 
 <body>
@@ -47,29 +56,16 @@
   <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
   <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
   <script type="module" src="/src/main.tsx"></script>
-  <!-- <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-  <script>
-    window.onload = function () {
-      const turnstile = document.querySelector('#cf-turnstile');
-      if (turnstile) {
-        turnstile.setAttribute('data-cf-turnstile', 'on');
-        turnstile.setAttribute('data-cf-turnstile-action', 'homepage');
-      }
-      if (turnstile) {
-        turnstile.style.display = 'block';
-      }
-    };
-  </script>
-  <style>
-    .turnstile-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  </style>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  
+  <!-- Cloudflare Turnstile Widget -->
   <div class="turnstile-container">
-    <div class="cf-turnstile" data-sitekey="0x4AAAAAABdViKB4FngjhCAX" data-callback="onTurnstileSubmit"></div>
-  </div> -->
+    <div
+      class="cf-turnstile"
+      data-sitekey="0x4AAAAAABdhSDHjm_aMxiJ3"
+      data-callback="onTurnstileSubmit">
+    </div>
+  </div>
 </body>
 
 </html>
