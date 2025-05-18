@@ -1,7 +1,6 @@
 import TeamSection from './ui/card-team';
 import type { TeamMember } from '@/types/team';
 
-
 const name = [
   'Ginanjar Abdul Hakim',
   'Luthfi Apriliansyah',
@@ -12,10 +11,10 @@ const name = [
 
 const jobTitles = [
   'UI Designer',
-  'CTO',
+  'UX Designer',
   'Web Analyst',
   'Developer',
-  'Marketing Director',
+  'Documentation',
 ];
 
 const instagramLinks = [
@@ -38,7 +37,7 @@ const photos = [
   // GinanjarImg,
   '/images/team/luthfi-removebg-preview.png',
   // RossyadaImg,
-  // RakaImg,
+  // '/images/team/raka.png'
   // TazrilImg,
 ];
 
