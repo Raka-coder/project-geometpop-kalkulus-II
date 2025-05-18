@@ -47,7 +47,6 @@
   <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
   <script src="https://cdn.gpteng.co/gptengineer.js  " type="module"></script>
   <script type="module" src="/src/main.tsx"></script>
-  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
   <!-- Cloudflare Turnstile Widget -->
   <div class="turnstile-container">
@@ -56,20 +55,33 @@
   </div>
 
   <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Load Turnstile script dynamically
+      const script = document.createElement('script');
+      script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js ';
+      script.async = true;
+      script.defer = true;
+      document.body.appendChild(script);
 
-    document.getElementById('turnstile-widget')
-      .setAttribute('data-sitekey', import.meta.env.VITE_TURNSTILE_SITE_KEY);
+      // Set Site Key after script is loaded
+      script.onload = () => {
+        const turnstileWidget = document.getElementById('turnstile-widget');
+        if (turnstileWidget) {
+          turnstileWidget.setAttribute('data-sitekey', import.meta.env.VITE_TURNSTILE_SITE_KEY);
+        }
+      };
+    });
 
     function onTurnstileSubmit(token) {
       console.log('Turnstile verification successful. Token:', token);
 
-      // Sembunyikan widget Turnstile
+      // Hide the Turnstile widget
       const turnstileContainer = document.querySelector('.turnstile-container');
       if (turnstileContainer) {
         turnstileContainer.style.display = 'none';
       }
 
-      // Anda juga bisa menambahkan logika lain di sini, seperti mengirim token ke server.
+      // You can add additional logic here, such as sending the token to the server.
     }
   </script>
 
