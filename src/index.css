@@ -65,3 +65,21 @@
     height: 400px; /* Tinggi lebih kecil untuk perangkat mobile */
   }
 }
+
+.turnstile-container {
+  display: flex;
+  justify-content: center; /* Horizontal center */
+  align-items: center; /* Vertical center */
+  position: fixed; /* Tetap di tengah layar */
+  top: 0;
+  left: 0;
+  width: 100%; /* Lebar penuh */
+  height: 100%; /* Tinggi penuh */
+  background-color: rgba(0, 0, 0, 0.5); /* Latar belakang semi-transparan */
+  z-index: 9999; /* Pastikan widget berada di atas semua elemen */
+}
+
+.cf-turnstile {
+  width: 300px; /* Lebar default Turnstile */
+  padding: 20px; /* Ruang di sekitar widget */
+}
