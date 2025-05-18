@@ -26,7 +26,6 @@ const NotFound = () => {
           name="description"
           content="Halaman tidak ditemukan. Mungkin Anda salah mengetik alamat URL atau halaman tersebut belum dibuat."
         />
-        <link rel="canonical" href="/404" />
       </Helmet>
       <div className="min-h-screen flex items-center justify-center font-nunitosans bg-custom-gray/10">
         <div className="text-center pt-12">
