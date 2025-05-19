@@ -25,17 +25,17 @@ const instagramLinks = [
   'https://instagram.com/thislifeisnt_omoshiroi',
 ];
 
-const linkedinLinks = [
-  'https://linkedin.com/in/ginanjarabdulhakim',
-  'https://linkedin.com/in/luthfiapriliansyah',
-  'https://linkedin.com/in/rossyadaadly',
-  'https://linkedin.com/in/rakaresptra',
-  'https://linkedin.com/in/tazrildwiaprla',
+const githubLinks = [
+  'https://github.com/Maruzensky98',
+  'https://github.com/Luthfi778',
+  'https://github.com/kaizen191010',
+  'https://github.com/in/Raka-coder',
+  'https://github.com/Discbrake023',
 ];
 
 const photos = [
   // GinanjarImg,
-  '/images/team/luthfi-removebg-preview.png',
+  // '/images/team/luthfi-removebg-preview.png',
   // RossyadaImg,
   // '/images/team/raka.png'
   // TazrilImg,
@@ -50,7 +50,7 @@ export default function CardTeam() {
     photoUrl: photos[i],
     socialLinks: {
       instagram: instagramLinks[i],
-      linkedin: linkedinLinks[i],
+      github: githubLinks[i],
     },
   }));
 
