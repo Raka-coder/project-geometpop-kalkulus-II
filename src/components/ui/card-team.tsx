@@ -1,4 +1,4 @@
-import { Instagram, Linkedin } from 'lucide-react';
+import { Instagram, Github } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { AnimatePresence } from 'framer-motion';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
@@ -72,15 +72,15 @@ function TeamCard({ member }: TeamCardProps) {
               </a>
             )}
 
-            {member.socialLinks.linkedin && (
+            {member.socialLinks.github && (
               <a
-                href={member.socialLinks.linkedin}
+                href={member.socialLinks.github}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 transition-colors rounded-full hover:bg-muted"
                 aria-label={`${member.name}'s LinkedIn`}
               >
-                <Linkedin className="w-5 h-5 text-blue-600" />
+                <Github className="w-5 h-5 text-black/80" />
               </a>
             )}
           </div>
