@@ -1,5 +1,5 @@
-import { Card, CardTitle } from "@/components/ui/card"
 import { CheckCircle } from "lucide-react"
+import { Card, CardTitle } from "@/components/ui/card"
 
 function FeedbackGuide() {
   return (
