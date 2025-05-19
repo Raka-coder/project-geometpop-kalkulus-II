@@ -34,11 +34,11 @@ const githubLinks = [
 ];
 
 const photos = [
-  // GinanjarImg,
-  // '/images/team/luthfi-removebg-preview.png',
-  // RossyadaImg,
-  // '/images/team/raka.png'
-  // TazrilImg,
+  '/images/team/Ginanjar.jpg',
+  '/images/team/Luthfi.jpg',
+  '/images/team/Rossyada.jpg',
+  '/images/team/Raka.jpg',
+  '/images/team/Tazril.jpg',
 ];
 
 export default function CardTeam() {
