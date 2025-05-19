@@ -45,7 +45,7 @@ function TeamCard({ member }: TeamCardProps) {
     <Card className="h-full overflow-hidden duration-300 hover:shadow-lg transition-shadow">
       <CardContent className="p-0">
         <div className="flex flex-col items-center p-6">
-          <Avatar className="w-24 h-24 mb-4 border-2 border-primary">
+          <Avatar className="mb-4 border-2 border-primary" style={{ width: '6.25rem', height: '6.25rem' }}>
             <AvatarImage
               src={member.photoUrl || '/placeholder-svgrepo-com.svg'}
               alt={member.name}
