@@ -34,12 +34,12 @@ const FAQ = () => {
     {
       question: 'Apakah ada manual book untuk website ini?',
       answer:
-        "Ya, Anda dapat mengunduh manual book dengan mengklik tombol 'Unduh Manual Book' di halaman utama.",
+        "Ya, Anda dapat melihat manual book dengan mengklik tombol 'Lihat Manual Book' di halaman utama.",
     },
     {
       question: 'Bagaimana cara melaporkan bug atau memberikan saran?',
       answer:
-        "Silakan gunakan form feedback yang tersedia di halaman 'Bantuan'.",
+        "Silahkan gunakan form feedback yang tersedia di halaman 'Bantuan'.",
     },
   ];
 
