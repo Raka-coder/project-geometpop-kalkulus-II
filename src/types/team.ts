@@ -5,6 +5,6 @@ export interface TeamMember {
   photoUrl: string;
   socialLinks: {
     instagram?: string;
-    linkedin?: string;
+    github?: string;
   };
 }
