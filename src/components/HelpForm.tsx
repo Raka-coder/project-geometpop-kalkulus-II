@@ -123,6 +123,7 @@ function HelpFeedbackForm() {
         onSubmit={form.handleSubmit(onSubmit)}
         className="space-y-6"
         method="post"
+        id='feedback-form'
       >
         {submitSuccess && (
           <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded">
