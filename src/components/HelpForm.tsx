@@ -143,6 +143,9 @@ function HelpFeedbackForm() {
             </label>
             <Input
               id="name"
+              name='name'
+              autoComplete='name'
+              type="text"
               placeholder="Nama Anda"
               {...form.register('name')}
             />
@@ -159,7 +162,9 @@ function HelpFeedbackForm() {
             </label>
             <Input
               id="email"
+              name='email'
               type="email"
+              autoComplete="email"
               placeholder="example@gmail.com"
               {...form.register('email')}
             />
@@ -210,6 +215,7 @@ function HelpFeedbackForm() {
           </label>
           <Textarea
             id="message"
+            name='message'
             placeholder="Jelaskan feedback Anda secara detail..."
             className="min-h-[150px]"
             {...form.register('message')}
