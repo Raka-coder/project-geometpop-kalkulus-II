@@ -89,7 +89,7 @@ const Hero = () => {
                 </div>
                 <p className="text-custom-gray text-base">
                   Eksplorasi aplikasi matematika untuk menganalisis pertumbuhan
-                  populasi secara realistis.
+                  populasi dengan geometri.
                 </p>
               </div>
             </div>
