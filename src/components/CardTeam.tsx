@@ -11,10 +11,10 @@ const name = [
 
 const jobTitles = [
   'UI Designer',
-  'UX Designer',
+  'Researcher',
   'Web Analyst',
   'Developer',
-  'Documentation',
+  'UX Designer',
 ];
 
 const instagramLinks = [
