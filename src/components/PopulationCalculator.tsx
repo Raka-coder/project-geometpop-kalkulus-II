@@ -225,7 +225,7 @@ const PopulationCalculator = () => {
                 </p>
               </div>
 
-              <div className="flex items-center space-x-3 pt-2">
+              {/* <div className="flex items-center space-x-3 pt-2">
                 <Switch
                   id="use-carrying-capacity"
                   checked={useCarryingCapacity}
@@ -234,9 +234,9 @@ const PopulationCalculator = () => {
                 <Label htmlFor="use-carrying-capacity">
                   Gunakan Daya Dukung Lingkungan
                 </Label>
-              </div>
+              </div> */}
 
-              {useCarryingCapacity && (
+              {/* {useCarryingCapacity && (
                 <div className="space-y-2">
                   <Label htmlFor="carrying-capacity">Daya Dukung (K)</Label>
                   <Input
@@ -250,7 +250,7 @@ const PopulationCalculator = () => {
                     lingkungan
                   </p>
                 </div>
-              )}
+              )} */}
 
               <Button
                 onClick={calculatePopulation}
