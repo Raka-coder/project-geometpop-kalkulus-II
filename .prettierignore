@@ -1,1 +1,9 @@
 *.html
+*.d.ts
+*.js
+*.json
+*.ts
+*.css
+*.all-contributorsrc
+*.prettierrc
+*.mjs
