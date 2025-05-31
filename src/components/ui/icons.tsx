@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react';
 
 export function RocketIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
@@ -19,7 +19,7 @@ export function RocketIcon(props: React.SVGProps<SVGSVGElement>) {
       <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" />
       <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
     </svg>
-  )
+  );
 }
 
 export function TimerIcon(props: React.SVGProps<SVGSVGElement>) {
@@ -40,7 +40,7 @@ export function TimerIcon(props: React.SVGProps<SVGSVGElement>) {
       <line x1="12" x2="15" y1="14" y2="11" />
       <circle cx="12" cy="14" r="8" />
     </svg>
-  )
+  );
 }
 
 export function BarChartIcon(props: React.SVGProps<SVGSVGElement>) {
@@ -61,7 +61,7 @@ export function BarChartIcon(props: React.SVGProps<SVGSVGElement>) {
       <line x1="18" x2="18" y1="20" y2="4" />
       <line x1="6" x2="6" y1="20" y2="16" />
     </svg>
-  )
+  );
 }
 
 export function TrophyIcon(props: React.SVGProps<SVGSVGElement>) {
@@ -85,6 +85,5 @@ export function TrophyIcon(props: React.SVGProps<SVGSVGElement>) {
       <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22" />
       <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" />
     </svg>
-  )
+  );
 }
-

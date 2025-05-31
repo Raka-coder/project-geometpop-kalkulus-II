@@ -12,7 +12,7 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { Card, CardTitle } from '@/components/ui/card';
-import { Turnstile } from '@marsidev/react-turnstile'
+import { Turnstile } from '@marsidev/react-turnstile';
 import { useState } from 'react';
 import { Loader2 } from 'lucide-react';
 import axios from 'axios';
@@ -31,7 +31,6 @@ const feedbackFormSchema = z.object({
 type FeedbackFormValues = z.infer<typeof feedbackFormSchema>;
 
 function HelpFeedbackForm() {
-
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const [submitError, setSubmitError] = useState('');
@@ -113,7 +112,9 @@ function HelpFeedbackForm() {
 
   return (
     <Card className="p-6 mx-auto">
-      <CardTitle className="text-2xl text-dark-blue font-semibold mb-6">Kirim Feedback ke Developer</CardTitle>
+      <CardTitle className="text-2xl text-dark-blue font-semibold mb-6">
+        Kirim Feedback ke Developer
+      </CardTitle>
       <p className="mb-6 text-gray-700">
         Kami sangat menghargai masukan Anda untuk membantu kami meningkatkan
         website ini.
@@ -123,7 +124,7 @@ function HelpFeedbackForm() {
         onSubmit={form.handleSubmit(onSubmit)}
         className="space-y-6"
         method="post"
-        id='feedback-form'
+        id="feedback-form"
       >
         {submitSuccess && (
           <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded">
@@ -143,8 +144,8 @@ function HelpFeedbackForm() {
             </label>
             <Input
               id="name"
-              name='name'
-              autoComplete='name'
+              name="name"
+              autoComplete="name"
               type="text"
               placeholder="Nama Anda"
               {...form.register('name')}
@@ -162,7 +163,7 @@ function HelpFeedbackForm() {
             </label>
             <Input
               id="email"
-              name='email'
+              name="email"
               type="email"
               autoComplete="email"
               placeholder="example@gmail.com"
@@ -215,7 +216,7 @@ function HelpFeedbackForm() {
           </label>
           <Textarea
             id="message"
-            name='message'
+            name="message"
             placeholder="Jelaskan feedback Anda secara detail..."
             className="min-h-[150px]"
             {...form.register('message')}
@@ -247,4 +248,3 @@ function HelpFeedbackForm() {
 }
 
 export default HelpFeedbackForm;
-

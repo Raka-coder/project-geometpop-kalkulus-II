@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -43,12 +42,14 @@ const PopulationCalculator = () => {
   const { toast } = useToast();
 
   // Form inputs (using string for input values to handle comma separators)
-  const [initialPopulationStr, setInitialPopulationStr] = useState<string>('100');
+  const [initialPopulationStr, setInitialPopulationStr] =
+    useState<string>('100');
   const [growthRateStr, setGrowthRateStr] = useState<string>('0,05');
   const [periods, setPeriods] = useState<number>(20);
   const [useCarryingCapacity, setUseCarryingCapacity] =
     useState<boolean>(false);
-  const [carryingCapacityStr, setCarryingCapacityStr] = useState<string>('1000');
+  const [carryingCapacityStr, setCarryingCapacityStr] =
+    useState<string>('1000');
 
   // Parsed numeric values
   const [initialPopulation, setInitialPopulation] = useState<number>(100);
@@ -154,7 +155,7 @@ const PopulationCalculator = () => {
           </TabsTrigger>
           <TabsTrigger value="analysis" className="flex items-center">
             <TrendingUp size={16} className="mr-2" />
-            Analisis
+            Analisis Pertumbuhan
           </TabsTrigger>
         </TabsList>
 
@@ -335,177 +336,37 @@ const PopulationCalculator = () => {
         </TabsContent>
 
         <TabsContent value="analysis" className="space-y-4">
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center">
-                <Info size={18} className="mr-2" />
-                Analisis Deret Geometri
-              </CardTitle>
-              <CardDescription>
-                Informasi tambahan dan analisis mendalam berdasarkan parameter
-                model
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="space-y-4">
-                  <h3 className="text-lg font-semibold border-l-4 border-custom-yellow pl-3">
-                    Waktu Penggandaan
-                  </h3>
-                  <p className="text-sm">
-                    Waktu yang dibutuhkan untuk populasi menjadi dua kali lipat
-                    dari ukuran awalnya.
-                  </p>
-                  <div className="bg-gray-50 p-4 rounded-md">
-                    {growthRate > 0 ? (
-                      <>
-                        <p className="text-xl font-bold text-dark-blue">
-                          {doublingTime.toFixed(2)} periode
-                        </p>
-                        <p className="text-sm text-muted-foreground">
-                          Dengan tingkat pertumbuhan{' '}
-                          {(growthRate * 100).toFixed(2)}% per periode
-                        </p>
-                      </>
-                    ) : (
-                      <p className="text-red-500">
-                        Populasi tidak tumbuh (tingkat pertumbuhan ≤ 0)
-                      </p>
-                    )}
-                  </div>
+          <Card className="mb-8">
+            <CardContent className="p-6">
+              <h2 className="text-2xl font-semibold text-dark-blue mb-4">
+                Aplikasi dalam Pemodelan Populasi
+              </h2>
+              <p className="text-gray-700 mb-4">
+                Deret geometri memiliki aplikasi yang kuat dalam pemodelan
+                pertumbuhan populasi:
+              </p>
 
-                  <h3 className="text-lg font-semibold border-l-4 border-custom-yellow pl-3 mt-6">
-                    Waktu Untuk Mencapai Target
-                  </h3>
-                  {growthRate > 0 ? (
-                    <div className="space-y-2">
-                      <p className="text-sm">
-                        Berapa periode yang dibutuhkan untuk mencapai populasi
-                        10 kali lipat dari populasi awal:
-                      </p>
-                      <div className="bg-gray-50 p-4 rounded-md">
-                        <p className="text-xl font-bold text-dark-blue">
-                          {calculateTimeToReachPopulation(
-                            initialPopulation,
-                            initialPopulation * 10,
-                            growthRate
-                          )}{' '}
-                          periode
-                        </p>
-                      </div>
-                    </div>
-                  ) : (
-                    <p className="text-sm text-red-500">
-                      Tidak dapat menghitung waktu pencapaian dengan tingkat
-                      pertumbuhan ≤ 0
-                    </p>
-                  )}
-                </div>
-
-                <div className="space-y-4">
-                  <h3 className="text-lg font-semibold border-l-4 border-custom-yellow pl-3">
-                    Total Individu Selama Periode
-                  </h3>
-                  <p className="text-sm">
-                    Total individu yang ada selama semua periode (jumlah dari
-                    semua periode). Ini adalah jumlah suku deret geometri.
-                  </p>
-                  <div className="bg-gray-50 p-4 rounded-md">
-                    <p className="text-xl font-bold text-dark-blue mb-2">
-                      {formatNumber(totalIndividuals)}
-                    </p>
-                    <div className="flex items-center">
-                      <p className="text-sm text-muted-foreground">
-                        <MathRenderer
-                          type="inline"
-                          formula="S_n = \frac{a(1 - r^n)}{1 - r}"
-                        />
-                      </p>
-                      <p className="text-sm text-muted-foreground ml-2">
-                        untuk {periods + 1} suku
-                      </p>
-                    </div>
-                  </div>
-
-                  <h3 className="text-lg font-semibold border-l-4 border-custom-yellow pl-3 mt-6">
-                    Analisis Jangka Panjang
-                  </h3>
-                  {infiniteSum !== null ? (
-                    <>
-                      <p className="text-sm">
-                        Untuk rasio pertumbuhan |r| &lt; 1, jumlah deret
-                        geometri tak hingga:
-                      </p>
-                      <div className="bg-gray-50 p-4 rounded-md">
-                        <p className="text-xl font-bold text-dark-blue">
-                          {formatNumber(infiniteSum)}
-                        </p>
-                        <p className="text-sm text-muted-foreground">
-                          S<sub>∞</sub> = a/(1-r) = {initialPopulation}/(1-(
-                          {growthRate.toFixed(2)}))
-                        </p>
-                      </div>
-                    </>
-                  ) : (
-                    <div className="bg-gray-50 p-4 rounded-md">
-                      <p className="text-red-500">
-                        Deret divergen (jumlah tak hingga tidak terhingga)
-                        karena |r| ≥ 1
-                      </p>
-                      <p className="text-sm text-muted-foreground">
-                        Dengan tingkat pertumbuhan{' '}
-                        {(growthRate * 100).toFixed(2)}%, populasi akan terus
-                        bertambah tanpa batas
-                      </p>
-                    </div>
-                  )}
-                </div>
+              <h3 className="text-xl font-semibold text-dark-blue mt-6 mb-3">
+                Model Pertumbuhan Eksponensial
+              </h3>
+              <p className="text-gray-700 mb-4">
+                Model pertumbuhan eksponensial menggunakan deret geometri di
+                mana ukuran populasi pada waktu t dapat dinyatakan sebagai:
+              </p>
+              <div className="bg-dark-blue/5 p-4 rounded-lg mb-6 flex flex-col items-center justify-center gap-4">
+                <p className="text-center text-sm font-bold text-dark-blue">
+                  <MathRenderer
+                    type="inline"
+                    formula="P(t) = P_0 \times (1 + r)^t"
+                  />
+                </p>
               </div>
+              <p className="text-gray-700 mb-4">
+                Di mana P<sub>0</sub> adalah populasi awal dan r adalah tingkat
+                pertumbuhan per periode waktu.
+              </p>
 
-              <Card className="bg-dark-blue/5 border-custom-yellow mt-4">
-                <CardHeader className="py-3">
-                  <CardTitle className="text-dark-blue text-lg">
-                    Penjelasan Model
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm mb-3">
-                    <span className="font-semibold">Model Dasar: </span>
-                    <span className="inline-flex items-center">
-                      Pertumbuhan populasi mengikuti pola deret geometri dengan
-                      rumus&nbsp;&nbsp;
-                      <MathRenderer
-                        formula="P(t) = P_0 (1 + r)^t"
-                        type="inline"
-                      />
-                    </span>
-                  </p>
-                  {useCarryingCapacity ? (
-                    <p className="text-sm mb-3">
-                      <span className="font-semibold">
-                        Model dengan Daya Dukung:
-                      </span>
-                      <span className="inline-flex items-center">
-                        Ketika daya dukung diterapkan, model menggunakan
-                        persamaan logistik
-                        <MathRenderer
-                          formula="P(t+1) = P(t) + r×P(t)×(1-P(t)/K)"
-                          type="inline"
-                        />
-                        di mana K adalah kapasitas maksimum.
-                      </span>
-                    </p>
-                  ) : (
-                    <p className="text-sm mb-3">
-                      <span className="font-semibold">Keterbatasan:</span> Model
-                      dasar tanpa daya dukung dapat menghasilkan pertumbuhan tak
-                      terbatas yang tidak realistis dalam jangka panjang.
-                      Aktifkan "Daya Dukung Lingkungan" untuk model yang lebih
-                      realistis.
-                    </p>
-                  )}
-                </CardContent>
-              </Card>
+              {/*  */}
             </CardContent>
           </Card>
         </TabsContent>

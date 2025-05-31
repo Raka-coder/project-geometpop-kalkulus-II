@@ -20,11 +20,15 @@ export default function TeamSection({ members }: TeamSectionProps) {
           {members.map((member, index) => (
             <motion.div
               key={member.id}
-              initial={{ opacity: 0,  y: 50 }}
+              initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 0.6, ease: 'easeOut', delay: index * 0.2 }}
+              transition={{
+                duration: 0.6,
+                ease: 'easeOut',
+                delay: index * 0.2,
+              }}
               viewport={{ once: false }}
             >
               <TeamCard member={member} />
@@ -45,7 +49,10 @@ function TeamCard({ member }: TeamCardProps) {
     <Card className="h-full overflow-hidden duration-300 hover:shadow-lg transition-shadow">
       <CardContent className="p-0">
         <div className="flex flex-col items-center p-6">
-          <Avatar className="mb-4 border-2 border-primary" style={{ width: '6.25rem', height: '6.25rem' }}>
+          <Avatar
+            className="mb-4 border-2 border-primary"
+            style={{ width: '6.25rem', height: '6.25rem' }}
+          >
             <AvatarImage
               src={member.photoUrl || '/placeholder-svgrepo-com.svg'}
               alt={member.name}
@@ -68,7 +75,10 @@ function TeamCard({ member }: TeamCardProps) {
                 className="p-2 transition-colors rounded-full hover:bg-muted"
                 aria-label={`${member.name}'s GitHub`}
               >
-                <Instagram strokeWidth={2.25} className="w-5 h-5 text-pink-700" />
+                <Instagram
+                  strokeWidth={2.25}
+                  className="w-5 h-5 text-pink-700"
+                />
               </a>
             )}
 
@@ -99,4 +109,3 @@ function getInitials(name: string): string {
     .toUpperCase()
     .substring(0, 2);
 }
-

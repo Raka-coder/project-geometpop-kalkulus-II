@@ -45,7 +45,9 @@ const FAQ = () => {
 
   return (
     <div className="max-w-4xl mx-auto mt-8 p-6">
-      <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-6">FAQ</h2>
+      <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-6">
+        FAQ
+      </h2>
       <Accordion type="single" collapsible className="w-full">
         {faqs.map((faq, index) => (
           <AccordionItem key={index} value={`item-${index}`}>

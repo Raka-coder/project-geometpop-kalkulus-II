@@ -9,8 +9,14 @@ const MathRenderer = ({ formula, type = 'block' }) => {
       {...({
         options: {
           tex: {
-            inlineMath: [['$', '$'], ['\\(', '\\)']],
-            displayMath: [['$$', '$$'], ['\\[', '\\]']],
+            inlineMath: [
+              ['$', '$'],
+              ['\\(', '\\)'],
+            ],
+            displayMath: [
+              ['$$', '$$'],
+              ['\\[', '\\]'],
+            ],
             processEscapes: true,
             processRefs: true,
             processEnvironments: true,

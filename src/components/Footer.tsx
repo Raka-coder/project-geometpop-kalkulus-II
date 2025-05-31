@@ -4,7 +4,7 @@ import { DnaIcon, Github } from 'lucide-react';
 function Footer() {
   const footerItems = [
     { name: 'Beranda', path: '/' },
-    { name: 'Tentang Deret', path: '/about' },
+    // { name: 'Tentang Deret', path: '/about' },
     { name: 'Pemodelan', path: '/modeling' },
     { name: 'Kuis', path: '/quiz' },
     { name: 'Bantuan', path: '/help' },

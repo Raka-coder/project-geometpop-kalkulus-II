@@ -9,18 +9,13 @@
   </a>
 </div>
 
-
 ## Project Info
 
 **URL**: https://geometpop.pages.dev/
 
 ## Deskripsi
-Pada project ini kami membuat aplikasi web yang dapat digunakan untuk menghitung pemodelan populasi dengan deret geometri. Aplikasi ini ditujukan untuk membantu mahasiswa dalam memahami konsep pemodelan populasi dengan deret geometri.
 
-## Preview
-<div align="center">
-  <img src="https://github.com/Raka-coder/project-geometpop-kalkulus-II/blob/751ecbbaa2dc512efc38fcfad327743a41c334a5/src/assets/images/previews/geometpop-preview.png" width="100%" />
-</div>
+Pada project ini kami membuat aplikasi web yang dapat digunakan untuk menghitung pemodelan populasi dengan deret geometri. Aplikasi ini ditujukan untuk membantu mahasiswa dalam memahami konsep pemodelan populasi dengan deret geometri.
 
 ## Fitur Utama
 
@@ -38,10 +33,12 @@ Project ini dibangun dengan teknologi berikut: <br>
 - ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 - ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 - ![Radix UI](https://img.shields.io/badge/radix%20ui-161618.svg?style=for-the-badge&logo=radix-ui&logoColor=white)
-  
+
 ## Library yang Digunakan
+
 Selain teknologi di atas, project ini juga menggunakan beberapa library tambahan: <br>
-- ![Axios](https://img.shields.io/badge/axios-%230A58C1.svg?style=for-the-badge&logo=axios&logoColor=white) 
+
+- ![Axios](https://img.shields.io/badge/axios-%230A58C1.svg?style=for-the-badge&logo=axios&logoColor=white)
 - ![Framer Motion](https://img.shields.io/badge/Framer-black?style=for-the-badge&logo=framer&logoColor=white)
 - ![React Hook Form](https://img.shields.io/badge/React%20Hook%20Form-%238526E4.svg?style=for-the-badge&logo=reacthookform&logoColor=white)
 - ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
@@ -49,8 +46,11 @@ Selain teknologi di atas, project ini juga menggunakan beberapa library tambahan
 - ![Zod](https://img.shields.io/badge/zod-%233068b7.svg?style=for-the-badge&logo=zod&logoColor=white)
 
 ## Cara Penggunaan
+
 ### Prasyarat
+
 Untuk menggunakan aplikasi ini, Anda perlu memiliki beberapa alat/tools berikut:
+
 ```
 - Node.js   => v20.0.0 atau versi terbaru
 - NPM       => v10.0.0 atau versi terbaru
@@ -58,35 +58,49 @@ Untuk menggunakan aplikasi ini, Anda perlu memiliki beberapa alat/tools berikut:
 ```
 
 ### Instalasi
+
 Sebelum menggunakan aplikasi ini, Anda perlu melakukan clone terlebih dahulu repository ini:
+
 ```
 git clone https://github.com/Raka-coder/project-geometpop-kalkulus-II.git
 ```
+
 Masuk ke direktori:
+
 ```
 cd project-geometpop-kalkulus-II
 ```
+
 Sebelum menjalankan aplikasi ini, Anda perlu menginstal dependensi dengan perintah berikut:
+
 ```
 npm install
 ```
+
 atau
+
 ```
 npm install --legacy-peer-deps
 ```
 
 ### Menjalankan Aplikasi
+
 Untuk menjalankan aplikasi ini, Anda perlu menjalankan perintah berikut:
+
 ```
 npm run dev
 ```
-atau 
+
+atau
+
 ```
 npm run dev -- --host
 ```
+
 Agar aplikasi dapat diakses melalui browser secara mobile, tambahkan flag `--host` Dapatkan link localhost, lalu buka di browser Anda.
 
 ## Kontributor
+
 Berikut ini adalah daftar kontributor yang telah berkontribusi pada project ini:
 
 - Ginanjar Abdul Hakim
@@ -111,6 +125,7 @@ Berikut ini adalah daftar kontributor yang telah berkontribusi pada project ini:
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
 
 ## Sumber Daya
+
 Project ini menggunakan beberapa sumber daya tambahan yang menurut kami memberikan manfaat dan inspirasi:
 
 - [Google Fonts](https://fonts.google.com/)

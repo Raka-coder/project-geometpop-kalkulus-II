@@ -8,7 +8,10 @@ const PDFViewer = ({ pdfUrl }) => {
   const defaultLayoutPluginInstance = defaultLayoutPlugin();
 
   return (
-    <div className="pdf-viewer-container" style={{ height: '400px', border: '1px solid #ddd' }}>
+    <div
+      className="pdf-viewer-container"
+      style={{ height: '400px', border: '1px solid #ddd' }}
+    >
       {/* Worker untuk merender PDF */}
       <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js">
         {/* Viewer untuk menampilkan PDF */}

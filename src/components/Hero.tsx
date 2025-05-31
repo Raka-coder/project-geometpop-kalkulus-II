@@ -2,30 +2,29 @@ import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Typewriter } from 'react-simple-typewriter';
 import { Button } from '@/components/ui/button';
-import MathRenderer from './MathRenderer';
 
 const Hero = () => {
   return (
-    <div className="relative gradient-bg py-16 md:py-24 overflow-hidden font-nunitosans">
+    <div className="relative gradient-bg py-24 md:py-36 overflow-hidden font-nunitosans">
       <div className="absolute inset-0 z-0 opacity-20">
         {/* Background pattern */}
         <div
           className="absolute inset-0"
           style={{
             backgroundImage:
-              'radial-gradient(circle, #fca311 1px, transparent 1px)',
+              'radial-gradient(circle, #fca311 2px, transparent 2px)',
             backgroundSize: '30px 30px',
           }}
         ></div>
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="flex flex-col md:flex-row items-center justify-between">
-          <div className="md:w-1/2 mb-10 md:mb-0">
+        <div className="flex flex-col items-center md:text-center">
+          <div className="mb-10 md:mb-0">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
               Pemodelan Pertumbuhan Populasi
             </h1>
-            <h2 className="text-xl md:text-2xl text-custom-yellow mb-6">
+            <h2 className="text-xl md:text-2xl md:text-center text-custom-yellow mb-6">
               dengan{' '}
               <Typewriter
                 words={['Deret Geometri', 'Aplikasi GeometPop!']}
@@ -37,12 +36,12 @@ const Hero = () => {
                 delaySpeed={1000}
               />
             </h2>
-            <p className="text-custom-gray mb-8 max-w-md">
+            <p className="text-custom-gray mb-8 md:text-center font-medium md:text-lg max-w-3xl">
               Eksplorasi bagaimana deret geometri dapat digunakan untuk
               memodelkan pertumbuhan populasi dari waktu ke waktu dengan
-              berbagai parameter dan batasan lingkungan.
+              berbagai parameter dan batasan periode yang akan ditentukan.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap md:items-center md:justify-center gap-4">
               <Button
                 asChild
                 className="bg-custom-yellow text-dark-blue hover:bg-custom-yellow/90 font-medium"
@@ -52,17 +51,17 @@ const Hero = () => {
                   <ArrowRight className="ml-2" size={16} />
                 </Link>
               </Button>
-              <Button
+              {/* <Button
                 asChild
                 variant="outline"
                 className="bg-dark-blue text-custom-gray hover:bg-dark-blue/90 font-medium"
               >
                 <Link to="/about">Pelajari Deret Geometri</Link>
-              </Button>
+              </Button> */}
             </div>
           </div>
 
-          <div className="md:w-1/2 flex justify-center">
+          {/* <div className="md:w-1/2 flex justify-center">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 w-full max-w-md card-shadow">
               <div className="text-center p-4">
                 <h3 className="text-white text-2xl font-semibold mb-2">
@@ -93,7 +92,7 @@ const Hero = () => {
                 </p>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
