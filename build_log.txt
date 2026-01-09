@@ -1,0 +1,24 @@
+
+> vite_react_shadcn_ts@0.0.0 build
+> vite build
+
+The `define` option contains an object with "PATH" for "process.env" key. It looks like you may have passed the entire `process.env` object to `define`, which can unintentionally expose all environment variables. This poses a security risk and is discouraged.
+vite v7.3.0 building client environment for production...
+transforming...
+✓ 2561 modules transformed.
+✗ Build failed in 7.47s
+error during build:
+[vite]: Rollup failed to resolve import "react-is" from "/home/rakarestu/Documents/reactkalkulus/project-geometpop-kalkulus-II/node_modules/recharts/es6/util/ReactUtils.js".
+This is most likely unintended because it can break your application at runtime.
+If you do want to externalize this module explicitly add it to
+`build.rollupOptions.external`
+    at viteLog (file:///home/rakarestu/Documents/reactkalkulus/project-geometpop-kalkulus-II/node_modules/vite/dist/node/chunks/config.js:33634:57)
+    at file:///home/rakarestu/Documents/reactkalkulus/project-geometpop-kalkulus-II/node_modules/vite/dist/node/chunks/config.js:33668:73
+    at onwarn (file:///home/rakarestu/Documents/reactkalkulus/project-geometpop-kalkulus-II/node_modules/@vitejs/plugin-react-swc/index.js:76:7)
+    at file:///home/rakarestu/Documents/reactkalkulus/project-geometpop-kalkulus-II/node_modules/vite/dist/node/chunks/config.js:33668:28
+    at onRollupLog (file:///home/rakarestu/Documents/reactkalkulus/project-geometpop-kalkulus-II/node_modules/vite/dist/node/chunks/config.js:33663:63)
+    at onLog (file:///home/rakarestu/Documents/reactkalkulus/project-geometpop-kalkulus-II/node_modules/vite/dist/node/chunks/config.js:33466:4)
+    at file:///home/rakarestu/Documents/reactkalkulus/project-geometpop-kalkulus-II/node_modules/rollup/dist/es/shared/node-entry.js:21032:32
+    at Object.logger [as onLog] (file:///home/rakarestu/Documents/reactkalkulus/project-geometpop-kalkulus-II/node_modules/rollup/dist/es/shared/node-entry.js:22919:9)
+    at ModuleLoader.handleInvalidResolvedId (file:///home/rakarestu/Documents/reactkalkulus/project-geometpop-kalkulus-II/node_modules/rollup/dist/es/shared/node-entry.js:21663:26)
+    at file:///home/rakarestu/Documents/reactkalkulus/project-geometpop-kalkulus-II/node_modules/rollup/dist/es/shared/node-entry.js:21621:26
